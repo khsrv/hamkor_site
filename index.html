@@ -1,0 +1,2008 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAMKOR - B2B Платформа для Узбекистана</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>HAMKOR</h2>
+            </div>
+            <div class="nav-menu">
+                <a href="#about" class="nav-link">О проекте</a>
+                <a href="#stats" class="nav-link">Статистика</a>
+                <a href="#marketplaces" class="nav-link">Маркетплейсы</a>
+                <a href="#how-it-works" class="nav-link">Как работает</a>
+                <a href="#suppliers" class="nav-link">Поставщикам</a>
+                <a href="#testimonials" class="nav-link">Отзывы</a>
+                <a href="#pricing" class="nav-link">Тарифы</a>
+                <a href="#advantages" class="nav-link">Преимущества</a>
+                <a href="#investment" class="nav-link">Инвестиции</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="#contact" class="nav-link">Контакты</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="gradient-text">HAMKOR</span><br>
+                    Ведущая B2B платформа<br>
+                    для Узбекистана
+                </h1>
+                <p class="hero-subtitle">
+                    Эффективное построение торговли на маркетплейсах без закупки товаров 
+                    и с высокой доходностью. Интеграция с UZUM и YANDEX MARKET.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="scrollToSection('investment')">
+                        <i class="fas fa-chart-line"></i>
+                        Инвестировать
+                    </button>
+                    <button class="btn-secondary" onclick="scrollToSection('about')">
+                        <i class="fas fa-play"></i>
+                        Узнать больше
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="hero-stat-number">
+                            <span class="hero-stat-value">543</span>
+                            <span class="hero-stat-unit">млн $</span>
+                        </div>
+                        <p>Объем e-commerce 2023</p>
+                    </div>
+                    <div class="stat-item">
+                        <div class="hero-stat-number">
+                            <span class="hero-stat-value">2</span>
+                            <span class="hero-stat-unit">млрд $</span>
+                        </div>
+                        <p>Прогноз к 2027</p>
+                    </div>
+                    <div class="stat-item">
+                        <div class="hero-stat-number">
+                            <span class="hero-stat-value">50</span>
+                            <span class="hero-stat-unit">+</span>
+                        </div>
+                        <p>Маркетплейсов</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="uzbekistan-map">
+                    <svg viewBox="0 0 400 300" class="map-svg">
+                        <!-- Simplified map of Uzbekistan -->
+                        <path d="M50 150 L100 120 L150 130 L200 110 L250 120 L300 100 L350 110 L380 130 L370 160 L350 180 L320 200 L280 190 L240 200 L200 190 L160 200 L120 190 L80 180 L60 160 Z" 
+                              fill="url(#uzbekistanGradient)" 
+                              stroke="#6366f1" 
+                              stroke-width="2"/>
+                        
+                        <!-- Major cities -->
+                        <circle cx="200" cy="150" r="8" fill="#ef4444" class="city-dot" data-city="Ташкент">
+                            <title>Ташкент - Столица</title>
+                        </circle>
+                        <circle cx="150" cy="120" r="6" fill="#f59e0b" class="city-dot" data-city="Самарканд">
+                            <title>Самарканд</title>
+                        </circle>
+                        <circle cx="250" cy="120" r="6" fill="#10b981" class="city-dot" data-city="Бухара">
+                            <title>Бухара</title>
+                        </circle>
+                        <circle cx="100" cy="160" r="5" fill="#8b5cf6" class="city-dot" data-city="Наманган">
+                            <title>Наманган</title>
+                        </circle>
+                        <circle cx="300" cy="160" r="5" fill="#06b6d4" class="city-dot" data-city="Нукус">
+                            <title>Нукус</title>
+                        </circle>
+                        
+                        <!-- Gradient definition -->
+                        <defs>
+                            <linearGradient id="uzbekistanGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0.1" />
+                                <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:0.2" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    
+                    <!-- Floating marketplace cards -->
+                    <div class="floating-card card-1">
+                        <div class="marketplace-logo">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect x='20' y='30' width='60' height='40' rx='5' fill='%236366f1'/%3E%3Ccircle cx='35' cy='45' r='3' fill='white'/%3E%3Ccircle cx='50' cy='45' r='3' fill='white'/%3E%3Ccircle cx='65' cy='45' r='3' fill='white'/%3E%3Ctext x='50' y='65' text-anchor='middle' font-family='Arial' font-size='12' fill='%236366f1' font-weight='bold'%3EUZUM%3C/text%3E%3C/svg%3E" alt="UZUM">
+                        </div>
+                        <span>UZUM</span>
+                    </div>
+                    
+                    <div class="floating-card card-2">
+                        <div class="marketplace-logo">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect x='20' y='20' width='60' height='60' rx='8' fill='%23fc3f1d'/%3E%3Cpath d='M40 35 L60 35 L60 45 L50 45 L50 55 L40 55 Z' fill='white'/%3E%3Ctext x='50' y='75' text-anchor='middle' font-family='Arial' font-size='10' fill='%23fc3f1d' font-weight='bold'%3EYandex%3C/text%3E%3C/svg%3E" alt="Yandex Market">
+                        </div>
+                        <span>Yandex Market</span>
+                    </div>
+                    
+                    <div class="floating-card card-3">
+                        <div class="marketplace-logo">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 20 L70 40 L60 50 L70 60 L50 80 L30 60 L40 50 L30 40 Z' fill='%2310b981'/%3E%3Ctext x='50' y='90' text-anchor='middle' font-family='Arial' font-size='12' fill='%2310b981' font-weight='bold'%3EB2B%3C/text%3E%3C/svg%3E" alt="B2B">
+                        </div>
+                        <span>B2B</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>О проекте HAMKOR</h2>
+                <p>Революционная B2B платформа, адаптированная для рынка Узбекистана</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Что такое HAMKOR?</h3>
+                    <p>
+                        HAMKOR — это инновационная B2B платформа, которая позволяет предпринимателям 
+                        эффективно торговать на ведущих маркетплейсах Узбекистана без необходимости 
+                        закупки товаров. Наша платформа интегрирована с UZUM и YANDEX MARKET, 
+                        обеспечивая максимальную доходность и минимальные риски.
+                    </p>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <i class="fas fa-handshake"></i>
+                            <h4>Без закупки товаров</h4>
+                            <p>Торгуйте без предварительных инвестиций в товар</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-chart-line"></i>
+                            <h4>Высокая доходность</h4>
+                            <p>Оптимизированные процессы для максимальной прибыли</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-link"></i>
+                            <h4>Интеграция с маркетплейсами</h4>
+                            <p>Прямая работа с UZUM и YANDEX MARKET</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="platform-mockup">
+                        <div class="mockup-header">
+                            <div class="mockup-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="mockup-content">
+                            <div class="mockup-sidebar">
+                                <div class="sidebar-item active">
+                                    <i class="fas fa-home"></i>
+                                    <span>Главная</span>
+                                </div>
+                                <div class="sidebar-item">
+                                    <i class="fas fa-box"></i>
+                                    <span>Каталог</span>
+                                </div>
+                                <div class="sidebar-item">
+                                    <i class="fas fa-chart-bar"></i>
+                                    <span>Аналитика</span>
+                                </div>
+                                <div class="sidebar-item">
+                                    <i class="fas fa-cog"></i>
+                                    <span>Настройки</span>
+                                </div>
+                            </div>
+                            <div class="mockup-main">
+                                <div class="dashboard-card">
+                                    <h4>Общая статистика</h4>
+                                    <div class="stats-row">
+                                        <div class="stat">
+                                            <span class="stat-value">₽2.5M</span>
+                                            <span class="stat-label">Оборот</span>
+                                        </div>
+                                        <div class="stat">
+                                            <span class="stat-value">+43%</span>
+                                            <span class="stat-label">Рост</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section id="stats" class="stats">
+        <div class="container">
+            <div class="section-header">
+                <h2>Рыночная статистика</h2>
+                <p>Данные, подтверждающие потенциал рынка Узбекистана</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="stat-number">
+                        <span class="stat-value">36</span>
+                        <span class="stat-unit">млн</span>
+                    </div>
+                    <p>Население Узбекистана</p>
+                    <span class="stat-trend">+1.2% в год</span>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                    <div class="stat-number">
+                        <span class="stat-value">543</span>
+                        <span class="stat-unit">млн $</span>
+                    </div>
+                    <p>Объем e-commerce 2023</p>
+                    <span class="stat-trend">+170% за 2 года</span>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="stat-number">
+                        <span class="stat-value">2</span>
+                        <span class="stat-unit">млрд $</span>
+                    </div>
+                    <p>Прогноз к 2027</p>
+                    <span class="stat-trend">+270% рост</span>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="stat-number">
+                        <span class="stat-value">85</span>
+                        <span class="stat-unit">%</span>
+                    </div>
+                    <p>Проникновение мобильного интернета</p>
+                    <span class="stat-trend">+20% в год</span>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <div class="stat-number">
+                        <span class="stat-value">50</span>
+                        <span class="stat-unit">+</span>
+                    </div>
+                    <p>Активных маркетплейсов</p>
+                    <span class="stat-trend">+25% в год</span>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-number">
+                        <span class="stat-value">45</span>
+                        <span class="stat-unit">%</span>
+                    </div>
+                    <p>Молодежь 18-45 лет</p>
+                    <span class="stat-trend">Целевая аудитория</span>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <div class="stat-number">
+                        <span class="stat-value">45</span>
+                        <span class="stat-unit">%</span>
+                    </div>
+                    <p>Оплата в рассрочку UZUM</p>
+                    <span class="stat-trend">Uzum Nasiya</span>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <div class="stat-number">
+                        <span class="stat-value">2</span>
+                        <span class="stat-unit">%</span>
+                    </div>
+                    <p>Налог на онлайн-доходы</p>
+                    <span class="stat-trend">Господдержка</span>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="stat-number">
+                        <span class="stat-value">4</span>
+                        <span class="stat-unit">%</span>
+                    </div>
+                    <p>Доля e-commerce в торговле</p>
+                    <span class="stat-trend">→ 15% к 2027</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marketplaces Section -->
+    <section id="marketplaces" class="marketplaces">
+        <div class="container">
+            <div class="section-header">
+                <h2>Ключевые маркетплейсы Узбекистана</h2>
+                <p>Ведущие платформы электронной коммерции</p>
+            </div>
+            
+            <div class="marketplaces-list">
+                <div class="marketplace-item">
+                    <div class="marketplace-name">UZUM Market</div>
+                    <div class="marketplace-desc">Лидер рынка, 2.36M посетителей</div>
+                </div>
+                <div class="marketplace-item">
+                    <div class="marketplace-name">ZoodMall</div>
+                    <div class="marketplace-desc">Международная платформа, 6M+ товаров</div>
+                </div>
+                <div class="marketplace-item">
+                    <div class="marketplace-name">Asaxiy.uz</div>
+                    <div class="marketplace-desc">Крупный локальный игрок</div>
+                </div>
+                <div class="marketplace-item">
+                    <div class="marketplace-name">Alif Shop</div>
+                    <div class="marketplace-desc">Финтех-экосистема</div>
+                </div>
+                <div class="marketplace-item">
+                    <div class="marketplace-name">IDEA</div>
+                    <div class="marketplace-desc">Мультикатегорийный маркетплейс</div>
+                </div>
+                <div class="marketplace-item">
+                    <div class="marketplace-name">Hopshop</div>
+                    <div class="marketplace-desc">Быстрорастущая платформа</div>
+                </div>
+                <div class="marketplace-item">
+                    <div class="marketplace-name">100K.uz</div>
+                    <div class="marketplace-desc">Специализированный маркетплейс</div>
+                </div>
+                <div class="marketplace-item">
+                    <div class="marketplace-name">Sello</div>
+                    <div class="marketplace-desc">Экосистема Market + Logistics + Pay</div>
+                </div>
+                <div class="marketplace-item">
+                    <div class="marketplace-name">Olcha</div>
+                    <div class="marketplace-desc">Локальный фокус, широкий ассортимент</div>
+                </div>
+                <div class="marketplace-item">
+                    <div class="marketplace-name">Yandex Market</div>
+                    <div class="marketplace-desc">Международная экспансия в Узбекистан</div>
+                </div>
+            </div>
+
+            <div class="marketplace-summary">
+                <div class="summary-stats">
+                    <div class="summary-stat">
+                        <span class="summary-value">50+</span>
+                        <span class="summary-label">Активных маркетплейсов</span>
+                    </div>
+                    <div class="summary-stat">
+                        <span class="summary-value">$543M</span>
+                        <span class="summary-label">Объем e-commerce 2023</span>
+                    </div>
+                    <div class="summary-stat">
+                        <span class="summary-value">$2B</span>
+                        <span class="summary-label">Прогноз к 2027</span>
+                    </div>
+                    <div class="summary-stat">
+                        <span class="summary-value">2%</span>
+                        <span class="summary-label">Налог на онлайн-доходы</span>
+                    </div>
+                </div>
+                <div class="summary-conclusion">
+                    <h3>Итог</h3>
+                    <p>Рынок e-commerce Узбекистана демонстрирует стремительный рост с объемом $543M в 2023 году и прогнозом до $2B к 2027 году. Более 50 активных маркетплейсов конкурируют за долю рынка, при этом UZUM Market является безусловным лидером. Государственная поддержка в виде льготного налогообложения (2%) и развития инфраструктуры создает благоприятные условия для дальнейшего развития отрасли.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>Как работает HAMKOR</h2>
+                <p>Революционная система FBS для эффективной торговли на маркетплейсах</p>
+            </div>
+
+            <!-- FBS Explanation -->
+            <div class="fbs-explanation">
+                <div class="fbs-content">
+                    <h3>Что такое FBS в маркетплейсах?</h3>
+                    <p>
+                        <strong>FBS (Fulfillment by Seller)</strong> — это модель работы маркетплейса, где продавец самостоятельно 
+                        управляет складскими запасами и доставкой товаров. В отличие от FBO (Fulfillment by Ozon), где товары 
+                        хранятся на складах маркетплейса, при FBS продавец:
+                    </p>
+                    <div class="fbs-features">
+                        <div class="fbs-feature">
+                            <i class="fas fa-warehouse"></i>
+                            <h4>Хранит товары на своих складах</h4>
+                            <p>Полный контроль над запасами и их расположением</p>
+                        </div>
+                        <div class="fbs-feature">
+                            <i class="fas fa-truck"></i>
+                            <h4>Организует доставку</h4>
+                            <p>Самостоятельно доставляет товары до складов маркетплейса</p>
+                        </div>
+                        <div class="fbs-feature">
+                            <i class="fas fa-chart-line"></i>
+                            <h4>Получает больше прибыли</h4>
+                            <p>Меньше комиссий маркетплейса, больше контроля над процессом</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- System Overview -->
+            <div class="system-overview">
+                <h3>Наша система работает по принципу FBS</h3>
+                <p>HAMKOR создает инфраструктуру для эффективной работы по модели FBS в Узбекистане</p>
+                
+                <div class="infrastructure">
+                    <div class="infrastructure-item">
+                        <div class="infra-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h4>Склады в основных городах</h4>
+                        <p>У нас будут склады в Ташкенте, Самарканде, Бухаре, Намангане и других ключевых городах Узбекистана</p>
+                    </div>
+                    <div class="infrastructure-item">
+                        <div class="infra-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4>Сеть партнеров-поставщиков</h4>
+                        <p>Регистрация поставщиков товаров с различными схемами сотрудничества</p>
+                    </div>
+                    <div class="infrastructure-item">
+                        <div class="infra-icon">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <h4>Интеграция с маркетплейсами</h4>
+                        <p>Прямая работа с UZUM, Yandex Market и другими платформами</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Partner Registration Process -->
+            <div class="partner-process">
+                <h3>Регистрация партнеров (поставщиков товаров)</h3>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Регистрация в системе</h4>
+                            <p>Партнеры регистрируются в нашу платформу и проходят верификацию</p>
+                            <ul class="step-features">
+                                <li>Заполнение анкеты поставщика</li>
+                                <li>Проверка документов и лицензий</li>
+                                <li>Подтверждение качества товаров</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Выбор схемы сотрудничества</h4>
+                            <p>Партнеры могут работать по одной из трех схем:</p>
+                            <div class="scheme-options">
+                                <div class="scheme-option">
+                                    <h5>Схема 1: Поставка товара</h5>
+                                    <p>Поставляют товар и дают себестоимость (если нет проблем с поставками)</p>
+                                </div>
+                                <div class="scheme-option">
+                                    <h5>Схема 2: Забор курьерами</h5>
+                                    <p>Наши курьеры забирают товар у партнера</p>
+                                </div>
+                                <div class="scheme-option">
+                                    <h5>Схема 3: Самостоятельная доставка</h5>
+                                    <p>Партнеры сами доставляют товар до склада маркетплейса</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Создание карточек товаров</h4>
+                            <p>Создают карточки товаров с полным описанием и фотографиями</p>
+                            <ul class="step-features">
+                                <li>Мы можем помочь с профессиональными фотографиями</li>
+                                <li>Оптимизация описаний для маркетплейсов</li>
+                                <li>Настройка цен и остатков</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seller Registration Process -->
+            <div class="seller-process">
+                <h3>Регистрация продавцов</h3>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Регистрация на платформе</h4>
+                            <p>Пользователи регистрируются в нашу систему</p>
+                            <ul class="step-features">
+                                <li>Быстрая регистрация за 5 минут</li>
+                                <li>Верификация документов</li>
+                                <li>Настройка профиля продавца</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Создание аккаунтов на маркетплейсах</h4>
+                            <p>Создают аккаунты на UZUM, Yandex Market и других платформах</p>
+                            <ul class="step-features">
+                                <li>Помощь в регистрации на маркетплейсах</li>
+                                <li>Настройка магазинов</li>
+                                <li>Интеграция по API для быстрого создания товаров</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Доступ к каталогу товаров</h4>
+                            <p>Получают доступ к миллионам товаров с готовыми фотографиями</p>
+                            <ul class="step-features">
+                                <li>Выбор товаров из каталога партнеров</li>
+                                <li>Готовые профессиональные фотографии</li>
+                                <li>Одним нажатием кнопки добавление в свои магазины</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Order Processing -->
+            <div class="order-processing">
+                <h3>Обработка заказов</h3>
+                <div class="order-flow">
+                    <div class="order-step">
+                        <div class="step-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <h4>Получение заказа</h4>
+                        <p>После получения заказа в свой магазин, в нашей системе появляется заказ со штрихкодом и всей необходимой информацией</p>
+                    </div>
+                    
+                    <div class="order-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                    
+                    <div class="order-step">
+                        <div class="step-icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <h4>Оплата товаров</h4>
+                        <p>Продавец оплачивает товары через нашу систему</p>
+                    </div>
+                    
+                    <div class="order-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                    
+                    <div class="order-step">
+                        <div class="step-icon">
+                            <i class="fas fa-box"></i>
+                        </div>
+                        <h4>Сборка заказа</h4>
+                        <p>Наша команда собирает заказ со склада или у партнеров, наклеивает нужный штрихкод</p>
+                    </div>
+                    
+                    <div class="order-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                    
+                    <div class="order-step">
+                        <div class="step-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h4>Доставка до маркетплейса</h4>
+                        <p>Доставляем заказ до складов или сортировочных центров маркетплейса</p>
+                    </div>
+                    
+                    <div class="order-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                    
+                    <div class="order-step">
+                        <div class="step-icon">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <h4>Выплата партнерам</h4>
+                        <p>Партнеры получают деньги за продажу товаров</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="platforms">
+                <h3>На каких платформах работает HAMKOR</h3>
+                <p class="platforms-subtitle">Наш продукт доступен на всех популярных устройствах и операционных системах</p>
+                
+                <div class="platforms-grid">
+                    <div class="platform-card">
+                        <div class="platform-icon">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <h4>Веб-браузеры</h4>
+                        <p class="platform-description">Работает в любом современном браузере</p>
+                        <div class="platform-compatibility">
+                            <div class="compatibility-item">
+                                <i class="fab fa-chrome"></i>
+                                <span>Chrome</span>
+                            </div>
+                            <div class="compatibility-item">
+                                <i class="fab fa-firefox-browser"></i>
+                                <span>Firefox</span>
+                            </div>
+                            <div class="compatibility-item">
+                                <i class="fab fa-safari"></i>
+                                <span>Safari</span>
+                            </div>
+                            <div class="compatibility-item">
+                                <i class="fab fa-edge"></i>
+                                <span>Edge</span>
+                            </div>
+                        </div>
+                        <ul class="platform-features">
+                            <li>Полный функционал управления</li>
+                            <li>Расширенная аналитика</li>
+                            <li>Массовые операции с товарами</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="platform-card">
+                        <div class="platform-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h4>Мобильные приложения</h4>
+                        <p class="platform-description">Нативные приложения для iOS и Android</p>
+                        <div class="platform-compatibility">
+                            <div class="compatibility-item">
+                                <i class="fab fa-apple"></i>
+                                <span>iOS 12+</span>
+                            </div>
+                            <div class="compatibility-item">
+                                <i class="fab fa-android"></i>
+                                <span>Android 8+</span>
+                            </div>
+                        </div>
+                        <ul class="platform-features">
+                            <li>Push-уведомления о заказах</li>
+                            <li>Быстрое управление товарами</li>
+                            <li>Офлайн режим работы</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="platforms-note">
+                    <div class="note-icon">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <div class="note-content">
+                        <h4>Синхронизация данных</h4>
+                        <p>Все ваши данные автоматически синхронизируются между всеми устройствами в реальном времени. Начните работу на компьютере, продолжите на телефоне - все изменения сохраняются мгновенно.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Advantages for Partners -->
+            <div class="partner-advantages">
+                <h3>Преимущества для партнеров (поставщиков товаров)</h3>
+                <div class="advantages-grid">
+                    <div class="advantage-card">
+                        <div class="advantage-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>Отдельный канал продаж</h4>
+                        <p>Новый канал сбыта без дополнительных инвестиций в маркетинг и рекламу</p>
+                    </div>
+                    
+                    <div class="advantage-card">
+                        <div class="advantage-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h4>Не заморачиваются с заказами</h4>
+                        <p>Мы берем на себя всю рутинную работу по обработке заказов и работе с клиентами</p>
+                    </div>
+                    
+                    <div class="advantage-card">
+                        <div class="advantage-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h4>Не парятся с доставкой</h4>
+                        <p>Полная логистическая поддержка - от упаковки до доставки до складов маркетплейса</p>
+                    </div>
+                    
+                    <div class="advantage-card">
+                        <div class="advantage-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Надежная система оплаты</h4>
+                        <p>Гарантированные платежи через нашу систему без рисков неплатежей</p>
+                    </div>
+                    
+                    <div class="advantage-card">
+                        <div class="advantage-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h4>Аналитика продаж</h4>
+                        <p>Детальные отчеты о продажах и популярности товаров</p>
+                    </div>
+                    
+                    <div class="advantage-card">
+                        <div class="advantage-icon">
+                            <i class="fas fa-expand-arrows-alt"></i>
+                        </div>
+                        <h4>Масштабирование бизнеса</h4>
+                        <p>Возможность быстрого роста без увеличения операционных расходов</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Advantages for Sellers -->
+            <div class="seller-advantages">
+                <h3>Преимущества для продавцов</h3>
+                <div class="advantages-grid">
+                    <div class="advantage-card">
+                        <div class="advantage-icon">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <h4>Не закупают товар</h4>
+                        <p>Работа без предварительных инвестиций в товар - платите только после продажи</p>
+                    </div>
+                    
+                    <div class="advantage-card">
+                        <div class="advantage-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h4>Не заморачиваются с доставкой</h4>
+                        <p>Мы полностью берем на себя логистику и доставку до складов маркетплейса</p>
+                    </div>
+                    
+                    <div class="advantage-card">
+                        <div class="advantage-icon">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <h4>Не делают расходы на фотосессию</h4>
+                        <p>Готовые профессиональные фотографии товаров уже включены в каталог</p>
+                    </div>
+                    
+                    <div class="advantage-card">
+                        <div class="advantage-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h4>Быстро создают карточки товара</h4>
+                        <p>Одним нажатием кнопки добавляют товары в свои магазины с готовыми описаниями</p>
+                    </div>
+                    
+                    <div class="advantage-card">
+                        <div class="advantage-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <h4>Закупают только после заказа</h4>
+                        <p>Покупают товар только после получения заказа от клиента - нулевые риски</p>
+                    </div>
+                    
+                    <div class="advantage-card">
+                        <div class="advantage-icon">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <h4>Доступ к аналитике</h4>
+                        <p>Полная аналитика продаж и трендов для оптимизации бизнеса</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Current Monetization Model -->
+            <div class="revenue-model">
+                <h3>Текущая модель монетизации</h3>
+                <div class="revenue-grid">
+                    <div class="revenue-card">
+                        <div class="revenue-icon">
+                            <i class="fas fa-percentage"></i>
+                        </div>
+                        <h4>Комиссия с продаж</h4>
+                        <p class="revenue-amount">3-7%</p>
+                        <p class="revenue-description">От оборота продавца в зависимости от категории товаров</p>
+                    </div>
+                    
+                    <div class="revenue-card">
+                        <div class="revenue-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h4>Доставка и упаковка</h4>
+                        <p class="revenue-amount">₽200-500</p>
+                        <p class="revenue-description">За каждую доставку и упаковку товаров</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Future Monetization Opportunities -->
+            <div class="future-monetization">
+                <h3>Будущие возможности монетизации</h3>
+                <div class="future-opportunities">
+                    <div class="opportunity-card">
+                        <div class="opportunity-icon">
+                            <i class="fas fa-box"></i>
+                        </div>
+                        <h4>Собственные товары</h4>
+                        <p>Добавление собственных товаров для реализации через платформу</p>
+                    </div>
+                    
+                    <div class="opportunity-card">
+                        <div class="opportunity-icon">
+                            <i class="fas fa-warehouse"></i>
+                        </div>
+                        <h4>Фулфилмент-сервис</h4>
+                        <p>Работа как современный фулфилмент для тех, кто не работает с нашей системой</p>
+                    </div>
+                    
+                    <div class="opportunity-card">
+                        <div class="opportunity-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h4>Логистическая компания</h4>
+                        <p>Предоставление логистических услуг для внешних клиентов</p>
+                    </div>
+                    
+                    <div class="opportunity-card">
+                        <div class="opportunity-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>Аналитические сервисы</h4>
+                        <p>Создание сервисов по типу MPSTATS и MPGURU для UZUM и других маркетплейсов</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="competitive-advantages">
+                <h3>Конкурентные преимущества</h3>
+                <div class="advantages-grid">
+                    <div class="advantage-card">
+                        <div class="advantage-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h4>Быстрый старт</h4>
+                        <p>Продавцы могут начать работу в течение 24 часов без предварительных инвестиций</p>
+                    </div>
+                    
+                    <div class="advantage-card">
+                        <div class="advantage-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Минимальные риски</h4>
+                        <p>Отсутствие необходимости закупки товаров снижает финансовые риски</p>
+                    </div>
+                    
+                    <div class="advantage-card">
+                        <div class="advantage-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h4>Автоматизация</h4>
+                        <p>Полностью автоматизированные процессы управления заказами и поставками</p>
+                    </div>
+                    
+                    <div class="advantage-card">
+                        <div class="advantage-icon">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <h4>Аналитика</h4>
+                        <p>Детальная аналитика продаж и прогнозирование спроса для оптимизации бизнеса</p>
+                    </div>
+                    
+                    <div class="advantage-card">
+                        <div class="advantage-icon">
+                            <i class="fas fa-expand-arrows-alt"></i>
+                        </div>
+                        <h4>Масштабируемость</h4>
+                        <p>Возможность быстрого масштабирования без увеличения операционных расходов</p>
+                    </div>
+                    
+                    <div class="advantage-card">
+                        <div class="advantage-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h4>Поддержка 24/7</h4>
+                        <p>Круглосуточная техническая поддержка и консультации для всех пользователей</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Отзывы наших партнеров и продавцов</h2>
+                <p>Реальные истории успеха от участников экосистемы HAMKOR</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Благодаря HAMKOR мы увеличили продажи на 300% за первые 6 месяцев. 
+                            Теперь у нас есть отдельный канал сбыта без дополнительных инвестиций в маркетинг."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%236366f1'/%3E%3Ctext x='50' y='60' text-anchor='middle' font-family='Arial' font-size='40' fill='white' font-weight='bold'%3EA%3C/text%3E%3C/svg%3E" alt="Азиз">
+                            </div>
+                            <div class="author-info">
+                                <h4>Азиз Каримов</h4>
+                                <p>Директор "Электроника Плюс"</p>
+                                <div class="author-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "HAMKOR полностью изменил наш подход к e-commerce. Теперь мы не закупаем товары заранее, 
+                            а работаем только после получения заказа. Это снизило риски на 90%."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%2310b981'/%3E%3Ctext x='50' y='60' text-anchor='middle' font-family='Arial' font-size='40' fill='white' font-weight='bold'%3EM%3C/text%3E%3C/svg%3E" alt="Мадина">
+                            </div>
+                            <div class="author-info">
+                                <h4>Мадина Усманова</h4>
+                                <p>Основатель "Fashion Store"</p>
+                                <div class="author-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Как поставщик, я очень доволен сотрудничеством с HAMKOR. Они берут на себя всю логистику 
+                            и работу с клиентами, а мы получаем стабильные продажи и быстрые платежи."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23f59e0b'/%3E%3Ctext x='50' y='60' text-anchor='middle' font-family='Arial' font-size='40' fill='white' font-weight='bold'%3EР%3C/text%3E%3C/svg%3E" alt="Рустам">
+                            </div>
+                            <div class="author-info">
+                                <h4>Рустам Ахмедов</h4>
+                                <p>Генеральный директор "Текстиль Групп"</p>
+                                <div class="author-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "За 3 месяца работы с HAMKOR наш оборот вырос в 5 раз. Система FBS позволяет нам 
+                            контролировать весь процесс и получать максимальную прибыль."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%238b5cf6'/%3E%3Ctext x='50' y='60' text-anchor='middle' font-family='Arial' font-size='40' fill='white' font-weight='bold'%3EС%3C/text%3E%3C/svg%3E" alt="Сардор">
+                            </div>
+                            <div class="author-info">
+                                <h4>Сардор Рахимов</h4>
+                                <p>Владелец "Tech Solutions"</p>
+                                <div class="author-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "HAMKOR помог нам выйти на новые рынки без больших инвестиций. Теперь наши товары 
+                            продаются на всех основных маркетплейсах Узбекистана."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23ef4444'/%3E%3Ctext x='50' y='60' text-anchor='middle' font-family='Arial' font-size='40' fill='white' font-weight='bold'%3EН%3C/text%3E%3C/svg%3E" alt="Нодира">
+                            </div>
+                            <div class="author-info">
+                                <h4>Нодира Каримова</h4>
+                                <p>Директор "Beauty & Care"</p>
+                                <div class="author-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Лучшее решение для B2B торговли в Узбекистане! Профессиональная команда, 
+                            отличная поддержка и реальные результаты. Рекомендую всем предпринимателям."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%2306b6d4'/%3E%3Ctext x='50' y='60' text-anchor='middle' font-family='Arial' font-size='40' fill='white' font-weight='bold'%3EД%3C/text%3E%3C/svg%3E" alt="Дилшод">
+                            </div>
+                            <div class="author-info">
+                                <h4>Дилшод Турсунов</h4>
+                                <p>CEO "Digital Commerce"</p>
+                                <div class="author-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonials-stats">
+                <div class="stat-item">
+                    <div class="stat-number">
+                        <span class="stat-value">500+</span>
+                    </div>
+                    <p>Довольных партнеров</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">
+                        <span class="stat-value">4.9</span>
+                        <span class="stat-unit">/5</span>
+                    </div>
+                    <p>Средняя оценка</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">
+                        <span class="stat-value">95%</span>
+                    </div>
+                    <p>Рекомендуют друзьям</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section id="advantages" class="advantages">
+        <div class="container">
+            <div class="section-header">
+                <h2>Преимущества HAMKOR</h2>
+                <p>Почему инвесторы выбирают нашу платформу</p>
+            </div>
+            <div class="advantages-content">
+                <div class="advantage-item">
+                    <div class="advantage-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="advantage-content">
+                        <h3>Быстрый старт</h3>
+                        <p>Продавцы могут начать работу в течение 24 часов без предварительных инвестиций в товар</p>
+                    </div>
+                </div>
+                <div class="advantage-item">
+                    <div class="advantage-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="advantage-content">
+                        <h3>Минимальные риски</h3>
+                        <p>Отсутствие необходимости закупки товаров снижает финансовые риски для продавцов</p>
+                    </div>
+                </div>
+                <div class="advantage-item">
+                    <div class="advantage-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="advantage-content">
+                        <h3>Автоматизация</h3>
+                        <p>Полностью автоматизированные процессы управления заказами и поставками</p>
+                    </div>
+                </div>
+                <div class="advantage-item">
+                    <div class="advantage-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <div class="advantage-content">
+                        <h3>Аналитика</h3>
+                        <p>Детальная аналитика продаж и прогнозирование спроса для оптимизации бизнеса</p>
+                    </div>
+                </div>
+                <div class="advantage-item">
+                    <div class="advantage-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="advantage-content">
+                        <h3>Масштабируемость</h3>
+                        <p>Возможность быстрого масштабирования бизнеса без увеличения операционных расходов</p>
+                    </div>
+                </div>
+                <div class="advantage-item">
+                    <div class="advantage-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <div class="advantage-content">
+                        <h3>Поддержка 24/7</h3>
+                        <p>Круглосуточная техническая поддержка и консультации для всех пользователей</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Suppliers Section -->
+    <section id="suppliers" class="suppliers">
+        <div class="container">
+            <div class="section-header">
+                <h2>Для поставщиков товаров</h2>
+                <p>Увеличьте продажи и расширьте рынок сбыта с HAMKOR</p>
+            </div>
+            
+            <div class="suppliers-hero">
+                <div class="suppliers-content">
+                    <h3>Почему поставщики выбирают HAMKOR?</h3>
+                    <p>Наша платформа предоставляет поставщикам уникальные возможности для увеличения продаж и выхода на новые рынки без дополнительных инвестиций в маркетинг и логистику.</p>
+                    <div class="suppliers-stats">
+                        <div class="supplier-stat">
+                            <div class="supplier-stat-number">
+                                <span class="supplier-stat-value">500</span>
+                                <span class="supplier-stat-unit">+</span>
+                            </div>
+                            <p>Активных продавцов</p>
+                        </div>
+                        <div class="supplier-stat">
+                            <div class="supplier-stat-number">
+                                <span class="supplier-stat-value">10</span>
+                                <span class="supplier-stat-unit">тыс+</span>
+                            </div>
+                            <p>Товаров в каталоге</p>
+                        </div>
+                        <div class="supplier-stat">
+                            <div class="supplier-stat-number">
+                                <span class="supplier-stat-value">50</span>
+                                <span class="supplier-stat-unit">млн ₽</span>
+                            </div>
+                            <p>Оборот в месяц</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="suppliers-visual">
+                    <div class="supplier-flow">
+                        <div class="flow-step">
+                            <div class="flow-icon">
+                                <i class="fas fa-upload"></i>
+                            </div>
+                            <h4>Загрузите товары</h4>
+                            <p>Добавьте свои товары в наш каталог</p>
+                        </div>
+                        <div class="flow-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                        <div class="flow-step">
+                            <div class="flow-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h4>Продавцы выбирают</h4>
+                            <p>Наши продавцы размещают ваши товары</p>
+                        </div>
+                        <div class="flow-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                        <div class="flow-step">
+                            <div class="flow-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h4>Растут продажи</h4>
+                            <p>Увеличение оборота и новых клиентов</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="supplier-benefits">
+                <h3>Преимущества для поставщиков</h3>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h4>Быстрый выход на рынок</h4>
+                        <p>Начните продажи на ведущих маркетплейсах Узбекистана уже через 24 часа после регистрации</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h4>Увеличение продаж</h4>
+                        <p>Средний рост продаж поставщиков на 200-300% в первые 6 месяцев работы</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4>Гарантированные платежи</h4>
+                        <p>Получайте оплату за товары сразу после их продажи, без ожидания</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h4>Управление логистикой</h4>
+                        <p>Мы берем на себя всю логистику: от упаковки до доставки клиенту</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <h4>Детальная аналитика</h4>
+                        <p>Получайте подробные отчеты о продажах, популярных товарах и трендах</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Защита от рисков</h4>
+                        <p>Мы страхуем товары и гарантируем возврат средств при повреждении</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="supplier-requirements">
+                <h3>Требования к поставщикам</h3>
+                <div class="requirements-grid">
+                    <div class="requirement-card">
+                        <div class="requirement-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h4>Официальная регистрация</h4>
+                        <p>Действующие документы о регистрации бизнеса в Узбекистане</p>
+                    </div>
+                    
+                    <div class="requirement-card">
+                        <div class="requirement-icon">
+                            <i class="fas fa-box"></i>
+                        </div>
+                        <h4>Качественные товары</h4>
+                        <p>Соответствие товаров стандартам качества и безопасности</p>
+                    </div>
+                    
+                    <div class="requirement-card">
+                        <div class="requirement-icon">
+                            <i class="fas fa-images"></i>
+                        </div>
+                        <h4>Качественные фото</h4>
+                        <p>Профессиональные фотографии товаров высокого разрешения</p>
+                    </div>
+                    
+                    <div class="requirement-card">
+                        <div class="requirement-icon">
+                            <i class="fas fa-warehouse"></i>
+                        </div>
+                        <h4>Складские запасы</h4>
+                        <p>Наличие товарных остатков для быстрой отгрузки</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="supplier-process">
+                <h3>Как стать поставщиком</h3>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Подача заявки</h4>
+                            <p>Заполните форму регистрации и приложите необходимые документы</p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Проверка документов</h4>
+                            <p>Наша команда проверяет документы в течение 1-2 рабочих дней</p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Загрузка товаров</h4>
+                            <p>Добавьте товары в каталог с описаниями и фотографиями</p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Начало продаж</h4>
+                            <p>Ваши товары появляются у продавцов и начинают продаваться</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="supplier-cta">
+                <div class="cta-content">
+                    <h3>Готовы увеличить продажи?</h3>
+                    <p>Присоединяйтесь к HAMKOR и начните продавать на ведущих маркетплейсах Узбекистана</p>
+                    <div class="cta-buttons">
+                        <button class="btn-primary" onclick="scrollToSection('contact')">
+                            <i class="fas fa-user-plus"></i>
+                            Стать поставщиком
+                        </button>
+                        <button class="btn-secondary" onclick="scrollToSection('contact')">
+                            <i class="fas fa-phone"></i>
+                            Узнать больше
+                        </button>
+                    </div>
+                </div>
+                <div class="cta-visual">
+                    <div class="supplier-mockup">
+                        <div class="mockup-header">
+                            <h4>Панель поставщика</h4>
+                        </div>
+                        <div class="mockup-stats">
+                            <div class="mockup-stat">
+                                <div class="mockup-stat-number">
+                                    <span class="mockup-stat-value">2.5</span>
+                                    <span class="mockup-stat-unit">млн ₽</span>
+                                </div>
+                                <span class="stat-label">Продажи за месяц</span>
+                            </div>
+                            <div class="mockup-stat">
+                                <div class="mockup-stat-number">
+                                    <span class="mockup-stat-value">+45</span>
+                                    <span class="mockup-stat-unit">%</span>
+                                </div>
+                                <span class="stat-label">Рост продаж</span>
+                            </div>
+                            <div class="mockup-stat">
+                                <div class="mockup-stat-number">
+                                    <span class="mockup-stat-value">156</span>
+                                    <span class="mockup-stat-unit"></span>
+                                </div>
+                                <span class="stat-label">Активных товаров</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Тарифы и цены</h2>
+                <p>Прозрачное ценообразование без скрытых платежей</p>
+            </div>
+            
+            <div class="pricing-tabs">
+                <button class="pricing-tab active" data-tab="sellers">Для продавцов</button>
+                <button class="pricing-tab" data-tab="partners">Для партнеров</button>
+            </div>
+            
+            <!-- Sellers Pricing -->
+            <div class="pricing-content active" data-tab="sellers">
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>Стартовый</h3>
+                            <div class="pricing-price">
+                                <span class="price-amount">3%</span>
+                                <span class="price-period">от оборота</span>
+                            </div>
+                            <p class="pricing-description">Идеально для начинающих продавцов</p>
+                        </div>
+                        <div class="pricing-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> До 100 товаров в каталоге</li>
+                                <li><i class="fas fa-check"></i> Интеграция с 2 маркетплейсами</li>
+                                <li><i class="fas fa-check"></i> Базовая аналитика</li>
+                                <li><i class="fas fa-check"></i> Email поддержка</li>
+                                <li><i class="fas fa-check"></i> Доставка ₽200 за заказ</li>
+                            </ul>
+                        </div>
+                        <button class="btn-primary pricing-btn">Выбрать план</button>
+                    </div>
+                    
+                    <div class="pricing-card featured">
+                        <div class="pricing-badge">Популярный</div>
+                        <div class="pricing-header">
+                            <h3>Профессиональный</h3>
+                            <div class="pricing-price">
+                                <span class="price-amount">2.5%</span>
+                                <span class="price-period">от оборота</span>
+                            </div>
+                            <p class="pricing-description">Для активных продавцов</p>
+                        </div>
+                        <div class="pricing-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> До 1000 товаров в каталоге</li>
+                                <li><i class="fas fa-check"></i> Интеграция с 5 маркетплейсами</li>
+                                <li><i class="fas fa-check"></i> Расширенная аналитика</li>
+                                <li><i class="fas fa-check"></i> Приоритетная поддержка</li>
+                                <li><i class="fas fa-check"></i> Доставка ₽150 за заказ</li>
+                                <li><i class="fas fa-check"></i> API доступ</li>
+                                <li><i class="fas fa-check"></i> Автоматическое ценообразование</li>
+                            </ul>
+                        </div>
+                        <button class="btn-primary pricing-btn">Выбрать план</button>
+                    </div>
+                    
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>Корпоративный</h3>
+                            <div class="pricing-price">
+                                <span class="price-amount">2%</span>
+                                <span class="price-period">от оборота</span>
+                            </div>
+                            <p class="pricing-description">Для крупных бизнесов</p>
+                        </div>
+                        <div class="pricing-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> Безлимитный каталог</li>
+                                <li><i class="fas fa-check"></i> Все маркетплейсы</li>
+                                <li><i class="fas fa-check"></i> Продвинутая аналитика</li>
+                                <li><i class="fas fa-check"></i> Персональный менеджер</li>
+                                <li><i class="fas fa-check"></i> Доставка ₽100 за заказ</li>
+                                <li><i class="fas fa-check"></i> Полный API доступ</li>
+                                <li><i class="fas fa-check"></i> Кастомные интеграции</li>
+                                <li><i class="fas fa-check"></i> Белые метки</li>
+                            </ul>
+                        </div>
+                        <button class="btn-primary pricing-btn">Связаться с нами</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Partners Pricing -->
+            <div class="pricing-content" data-tab="partners">
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>Базовый</h3>
+                            <div class="pricing-price">
+                                <span class="price-amount">Бесплатно</span>
+                                <span class="price-period">регистрация</span>
+                            </div>
+                            <p class="pricing-description">Для новых поставщиков</p>
+                        </div>
+                        <div class="pricing-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> До 50 товаров</li>
+                                <li><i class="fas fa-check"></i> Базовая аналитика продаж</li>
+                                <li><i class="fas fa-check"></i> Email поддержка</li>
+                                <li><i class="fas fa-check"></i> Стандартная схема доставки</li>
+                                <li><i class="fas fa-check"></i> Комиссия 5% с продаж</li>
+                            </ul>
+                        </div>
+                        <button class="btn-primary pricing-btn">Начать</button>
+                    </div>
+                    
+                    <div class="pricing-card featured">
+                        <div class="pricing-badge">Рекомендуемый</div>
+                        <div class="pricing-header">
+                            <h3>Премиум</h3>
+                            <div class="pricing-price">
+                                <span class="price-amount">₽10,000</span>
+                                <span class="price-period">в месяц</span>
+                            </div>
+                            <p class="pricing-description">Для активных поставщиков</p>
+                        </div>
+                        <div class="pricing-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> До 500 товаров</li>
+                                <li><i class="fas fa-check"></i> Расширенная аналитика</li>
+                                <li><i class="fas fa-check"></i> Приоритетная поддержка</li>
+                                <li><i class="fas fa-check"></i> Гибкие схемы доставки</li>
+                                <li><i class="fas fa-check"></i> Комиссия 3% с продаж</li>
+                                <li><i class="fas fa-check"></i> Помощь с фотографиями</li>
+                                <li><i class="fas fa-check"></i> Маркетинговые кампании</li>
+                            </ul>
+                        </div>
+                        <button class="btn-primary pricing-btn">Выбрать план</button>
+                    </div>
+                    
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>VIP</h3>
+                            <div class="pricing-price">
+                                <span class="price-amount">₽25,000</span>
+                                <span class="price-period">в месяц</span>
+                            </div>
+                            <p class="pricing-description">Для крупных поставщиков</p>
+                        </div>
+                        <div class="pricing-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> Безлимитный каталог</li>
+                                <li><i class="fas fa-check"></i> Продвинутая аналитика</li>
+                                <li><i class="fas fa-check"></i> Персональный менеджер</li>
+                                <li><i class="fas fa-check"></i> Все схемы доставки</li>
+                                <li><i class="fas fa-check"></i> Комиссия 2% с продаж</li>
+                                <li><i class="fas fa-check"></i> Профессиональная фотосессия</li>
+                                <li><i class="fas fa-check"></i> Эксклюзивные маркетинговые кампании</li>
+                                <li><i class="fas fa-check"></i> Приоритет в размещении</li>
+                            </ul>
+                        </div>
+                        <button class="btn-primary pricing-btn">Связаться с нами</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pricing-note">
+                <div class="note-icon">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+                <div class="note-content">
+                    <h4>Все тарифы включают</h4>
+                    <p>Безопасные платежи, защиту данных, регулярные обновления платформы и техническую поддержку. Никаких скрытых платежей или дополнительных комиссий.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Section -->
+    <section id="investment" class="investment">
+        <div class="container">
+            <div class="section-header">
+                <h2>Инвестиционные возможности</h2>
+                <p>Присоединяйтесь к растущему рынку e-commerce Узбекистана</p>
+            </div>
+            <div class="investment-content">
+                <div class="investment-text">
+                    <h3>Почему стоит инвестировать в HAMKOR?</h3>
+                    <div class="investment-points">
+                        <div class="point">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Растущий рынок</h4>
+                                <p>E-commerce в Узбекистане растет на 25% ежегодно</p>
+                            </div>
+                        </div>
+                        <div class="point">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Проверенная модель</h4>
+                                <p>Успешный опыт Reseiiup в России с оборотом ₽50M+</p>
+                            </div>
+                        </div>
+                        <div class="point">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Первые на рынке</h4>
+                                <p>Единственная B2B платформа для Узбекистана</p>
+                            </div>
+                        </div>
+                        <div class="point">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Высокая доходность</h4>
+                                <p>ROI 300%+ для инвесторов в первый год</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="investment-visual">
+                    <div class="roi-chart">
+                        <h4>Прогноз доходности</h4>
+                        <div class="chart-container">
+                            <div class="chart-bar" style="height: 20%">
+                                <span>2024</span>
+                                <span>₽2M</span>
+                            </div>
+                            <div class="chart-bar" style="height: 40%">
+                                <span>2025</span>
+                                <span>₽8M</span>
+                            </div>
+                            <div class="chart-bar" style="height: 60%">
+                                <span>2026</span>
+                                <span>₽20M</span>
+                            </div>
+                            <div class="chart-bar" style="height: 80%">
+                                <span>2027</span>
+                                <span>₽50M</span>
+                            </div>
+                            <div class="chart-bar" style="height: 100%">
+                                <span>2028</span>
+                                <span>₽100M</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="investment-cta">
+                <h3>Готовы инвестировать в будущее?</h3>
+                <p>Свяжитесь с нами для обсуждения условий инвестирования</p>
+                <button class="btn-primary" onclick="scrollToSection('contact')">
+                    <i class="fas fa-phone"></i>
+                    Связаться с нами
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Часто задаваемые вопросы</h2>
+                <p>Ответы на популярные вопросы о HAMKOR</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-categories">
+                    <button class="faq-category active" data-category="general">
+                        <i class="fas fa-question-circle"></i>
+                        Общие вопросы
+                    </button>
+                    <button class="faq-category" data-category="partners">
+                        <i class="fas fa-handshake"></i>
+                        Для партнеров
+                    </button>
+                    <button class="faq-category" data-category="sellers">
+                        <i class="fas fa-store"></i>
+                        Для продавцов
+                    </button>
+                    <button class="faq-category" data-category="technical">
+                        <i class="fas fa-cogs"></i>
+                        Технические
+                    </button>
+                </div>
+                
+                <div class="faq-content">
+                    <!-- General Questions -->
+                    <div class="faq-category-content active" data-category="general">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Что такое HAMKOR и как он работает?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>HAMKOR — это B2B платформа, которая работает по системе FBS (Fulfillment by Seller). Мы создаем инфраструктуру для эффективной торговли на маркетплейсах Узбекистана, где продавцы могут торговать без предварительной закупки товаров, а поставщики получают новый канал сбыта.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>В чем отличие от обычных маркетплейсов?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>В отличие от обычных маркетплейсов, где вы закупаете товары заранее, HAMKOR позволяет работать по принципу "продал — закупил". Вы платите за товар только после получения заказа от клиента, что минимизирует риски и не требует больших начальных инвестиций.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>С какими маркетплейсами работает HAMKOR?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Мы интегрированы с основными маркетплейсами Узбекистана: UZUM Market, Yandex Market, ZoodMall, Asaxiy.uz, Alif Shop, IDEA, Hopshop и другими. В планах расширение на все популярные платформы региона.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Сколько стоит использование платформы?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Мы берем комиссию 3-7% от оборота продавца в зависимости от категории товаров, плюс ₽200-500 за доставку и упаковку каждого заказа. Никаких скрытых платежей или ежемесячных подписок.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Partners Questions -->
+                    <div class="faq-category-content" data-category="partners">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Как стать партнером-поставщиком?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Зарегистрируйтесь на платформе, заполните анкету поставщика, приложите документы о регистрации бизнеса и сертификаты качества товаров. Наша команда проверит документы в течение 1-2 рабочих дней.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Какие схемы сотрудничества доступны?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>У нас есть 3 схемы: 1) Поставка товара с указанием себестоимости, 2) Забор товара нашими курьерами, 3) Самостоятельная доставка до склада маркетплейса. Вы можете выбрать наиболее удобную для вас.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Как быстро я получу оплату за товары?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Оплата поступает сразу после продажи товара. Мы гарантируем быстрые платежи через нашу систему без задержек. Средний срок поступления средств — 1-2 рабочих дня.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Нужно ли мне делать фотографии товаров?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Мы можем помочь с профессиональными фотографиями товаров. Если у вас уже есть качественные фото, вы можете использовать их. Главное — соответствие нашим стандартам качества.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Sellers Questions -->
+                    <div class="faq-category-content" data-category="sellers">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Как начать продавать на HAMKOR?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Зарегистрируйтесь на платформе, создайте аккаунты на маркетплейсах (мы поможем), выберите товары из нашего каталога и добавьте их в свои магазины одним нажатием кнопки. Начните продавать уже через 24 часа!</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Нужно ли закупать товары заранее?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Нет! Это главное преимущество HAMKOR. Вы закупаете товары только после получения заказа от клиента. Это означает нулевые риски и отсутствие необходимости в больших начальных инвестициях.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Как происходит обработка заказов?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>После получения заказа в вашем магазине, в нашей системе появляется заказ со штрихкодом. Вы оплачиваете товар, наша команда собирает заказ, наклеивает штрихкод и доставляет до склада маркетплейса.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Могу ли я устанавливать свои цены?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Да, вы полностью контролируете ценообразование. Мы показываем себестоимость товара, а вы устанавливаете свою наценку. Наша система поможет с рекомендациями по оптимальным ценам.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Technical Questions -->
+                    <div class="faq-category-content" data-category="technical">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Какие технические требования для работы?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Платформа работает в любом современном браузере. Для мобильных устройств доступны нативные приложения для iOS и Android. Минимальные требования: стабильное интернет-соединение и современное устройство.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Как происходит интеграция с маркетплейсами?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Мы используем официальные API маркетплейсов для автоматической синхронизации каталогов, цен и остатков. Интеграция происходит через безопасные протоколы с полным соответствием требованиям платформ.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Защищены ли мои данные?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Да, мы используем современные методы шифрования данных, SSL-сертификаты и соответствуем международным стандартам безопасности. Все данные хранятся на защищенных серверах в Узбекистане.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Есть ли мобильное приложение?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Да, у нас есть мобильные приложения для iOS и Android с полным функционалом платформы. Приложения поддерживают push-уведомления о заказах и офлайн режим работы.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Свяжитесь с нами</h2>
+                <p>Готовы обсудить инвестиционные возможности?</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>invest@hamkor.uz</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Телефон</h4>
+                            <p>+998 90 123 45 67</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Адрес</h4>
+                            <p>Ташкент, Узбекистан</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Телефон" required>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="">Размер инвестиций</option>
+                            <option value="100k-500k">₽100,000 - ₽500,000</option>
+                            <option value="500k-1m">₽500,000 - ₽1,000,000</option>
+                            <option value="1m-5m">₽1,000,000 - ₽5,000,000</option>
+                            <option value="5m+">₽5,000,000+</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Сообщение" rows="5"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        Отправить заявку
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>HAMKOR</h3>
+                    <p>B2B платформа для Узбекистана</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#about">О проекте</a>
+                    <a href="#stats">Статистика</a>
+                    <a href="#marketplaces">Маркетплейсы</a>
+                    <a href="#how-it-works">Как работает</a>
+                    <a href="#suppliers">Поставщикам</a>
+                    <a href="#advantages">Преимущества</a>
+                    <a href="#investment">Инвестиции</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 HAMKOR. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
