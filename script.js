@@ -182,23 +182,121 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Add loading animation
+// Enhanced Hero Animations
 window.addEventListener('load', () => {
     document.body.classList.add('loaded');
     
-    // Animate hero elements
+    // Initialize hero animations
+    initHeroAnimations();
+    
+    // Initialize counter animations
+    initCounterAnimations();
+    
+    // Initialize chart animations
+    initChartAnimations();
+    
+    // Initialize floating cards
+    initFloatingCards();
+});
+
+function initHeroAnimations() {
+    // Animate hero elements with stagger
     const heroElements = document.querySelectorAll('.hero-content > *');
     heroElements.forEach((el, index) => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';
-        el.style.transition = 'all 0.6s ease';
+        el.style.transition = 'all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
         
         setTimeout(() => {
             el.style.opacity = '1';
             el.style.transform = 'translateY(0)';
-        }, index * 200);
+        }, index * 200 + 500);
     });
-});
+}
+
+function initCounterAnimations() {
+    const counters = document.querySelectorAll('.hero-stat-value[data-count]');
+    
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                const target = parseInt(counter.getAttribute('data-count'));
+                animateCounter(counter, target, 2000);
+                counterObserver.unobserve(counter);
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    counters.forEach(counter => {
+        counterObserver.observe(counter);
+    });
+}
+
+function initChartAnimations() {
+    const chartLines = document.querySelectorAll('.chart-line');
+    
+    const chartObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                chartLines.forEach((line, index) => {
+                    const percentage = line.getAttribute('data-percentage');
+                    setTimeout(() => {
+                        line.style.height = percentage + '%';
+                    }, index * 200);
+                });
+                chartObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    const chartContainer = document.querySelector('.chart-container');
+    if (chartContainer) {
+        chartObserver.observe(chartContainer);
+    }
+}
+
+function initFloatingCards() {
+    const floatingCards = document.querySelectorAll('.floating-card');
+    
+    floatingCards.forEach((card, index) => {
+        // Add random movement
+        setInterval(() => {
+            const randomX = (Math.random() - 0.5) * 20;
+            const randomY = (Math.random() - 0.5) * 20;
+            card.style.transform = `translate(${randomX}px, ${randomY}px)`;
+        }, 3000 + index * 1000);
+        
+        // Add hover effects
+        card.addEventListener('mouseenter', () => {
+            card.style.transform = 'translateY(-15px) scale(1.05)';
+            card.style.boxShadow = '0 30px 60px rgba(0, 0, 0, 0.2)';
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'translateY(0) scale(1)';
+            card.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.1)';
+        });
+    });
+}
+
+// Enhanced counter animation
+function animateCounter(element, target, duration = 2000) {
+    let start = 0;
+    const increment = target / (duration / 16);
+    
+    function updateCounter() {
+        start += increment;
+        if (start < target) {
+            element.textContent = Math.floor(start).toLocaleString();
+            requestAnimationFrame(updateCounter);
+        } else {
+            element.textContent = target.toLocaleString();
+        }
+    }
+    
+    updateCounter();
+}
 
 // Chart animation
 function animateChart() {
@@ -281,6 +379,316 @@ document.querySelectorAll('section').forEach(section => {
     section.classList.add('reveal-section');
     revealObserver.observe(section);
 });
+
+// Contact cards animation
+document.addEventListener('DOMContentLoaded', () => {
+    const contactCards = document.querySelectorAll('.contact-card');
+    
+    const contactObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }, index * 200);
+                contactObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+    
+    contactCards.forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(30px)';
+        card.style.transition = 'all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+        contactObserver.observe(card);
+    });
+});
+
+// Add ripple effect to contact buttons
+document.addEventListener('DOMContentLoaded', () => {
+    const contactButtons = document.querySelectorAll('.contact-btn');
+    
+    contactButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            const ripple = document.createElement('span');
+            const rect = this.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = e.clientX - rect.left - size / 2;
+            const y = e.clientY - rect.top - size / 2;
+            
+            ripple.style.cssText = `
+                position: absolute;
+                width: ${size}px;
+                height: ${size}px;
+                left: ${x}px;
+                top: ${y}px;
+                background: rgba(255, 255, 255, 0.3);
+                border-radius: 50%;
+                transform: scale(0);
+                animation: ripple 0.6s linear;
+                pointer-events: none;
+            `;
+            
+            this.appendChild(ripple);
+            
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
+        });
+    });
+});
+
+// Add CSS for ripple animation
+const rippleStyle = document.createElement('style');
+rippleStyle.textContent = `
+    @keyframes ripple {
+        to {
+            transform: scale(4);
+            opacity: 0;
+        }
+    }
+    
+    @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
+    }
+    
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    @keyframes slideInLeft {
+        from {
+            opacity: 0;
+            transform: translateX(-50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    @keyframes slideInRight {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+`;
+document.head.appendChild(rippleStyle);
+
+// Enhanced scroll effects
+window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const parallax = document.querySelector('.hero-background');
+    const heroContent = document.querySelector('.hero-content');
+    const heroVisual = document.querySelector('.hero-visual');
+    
+    if (parallax) {
+        parallax.style.transform = `translateY(${scrolled * 0.5}px)`;
+    }
+    
+    if (heroContent) {
+        heroContent.style.transform = `translateY(${scrolled * 0.1}px)`;
+    }
+    
+    if (heroVisual) {
+        heroVisual.style.transform = `translateY(${scrolled * 0.1}px) rotateY(${scrolled * 0.01}deg)`;
+    }
+    
+    // Parallax effect for floating cards
+    const floatingCards = document.querySelectorAll('.floating-card');
+    floatingCards.forEach((card, index) => {
+        const speed = 0.1 + (index * 0.05);
+        card.style.transform = `translateY(${scrolled * speed}px)`;
+    });
+});
+
+// Mouse movement effects
+document.addEventListener('mousemove', (e) => {
+    const hero = document.querySelector('.hero');
+    if (!hero) return;
+    
+    const rect = hero.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    
+    const moveX = (x - centerX) / 50;
+    const moveY = (y - centerY) / 50;
+    
+    // Move gradient orbs
+    const orbs = document.querySelectorAll('.hero-gradient-orb');
+    orbs.forEach((orb, index) => {
+        const speed = 0.5 + (index * 0.3);
+        orb.style.transform = `translate(${moveX * speed}px, ${moveY * speed}px)`;
+    });
+    
+    // Move dashboard mockup
+    const dashboard = document.querySelector('.dashboard-mockup');
+    if (dashboard) {
+        dashboard.style.transform = `perspective(1000px) rotateY(${-15 + moveX * 0.5}deg) rotateX(${10 + moveY * 0.5}deg)`;
+    }
+});
+
+// Add smooth scroll to scroll indicator
+document.addEventListener('DOMContentLoaded', () => {
+    const scrollIndicator = document.querySelector('.scroll-indicator');
+    if (scrollIndicator) {
+        scrollIndicator.addEventListener('click', () => {
+            const aboutSection = document.querySelector('#about');
+            if (aboutSection) {
+                aboutSection.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    }
+});
+
+// Add typing effect to hero title
+function initTypingEffect() {
+    const titleElement = document.querySelector('.gradient-text');
+    if (!titleElement) return;
+    
+    const text = titleElement.textContent;
+    titleElement.textContent = '';
+    
+    let i = 0;
+    const typeWriter = () => {
+        if (i < text.length) {
+            titleElement.textContent += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, 100);
+        }
+    };
+    
+    setTimeout(typeWriter, 1000);
+}
+
+// Initialize typing effect after page load
+window.addEventListener('load', () => {
+    setTimeout(initTypingEffect, 500);
+});
+
+// Global animations and effects
+document.addEventListener('DOMContentLoaded', () => {
+    // Initialize scroll animations
+    initScrollAnimations();
+    
+    // Initialize parallax effects
+    initParallaxEffects();
+    
+    // Initialize card hover effects
+    initCardEffects();
+    
+    // Initialize button effects
+    initButtonEffects();
+});
+
+function initScrollAnimations() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-in');
+            }
+        });
+    }, observerOptions);
+    
+    // Observe all sections
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+        section.classList.add('animate-on-scroll');
+        observer.observe(section);
+    });
+    
+    // Observe cards
+    const cards = document.querySelectorAll('.card, .advantage-card, .point');
+    cards.forEach(card => {
+        card.classList.add('animate-on-scroll');
+        observer.observe(card);
+    });
+}
+
+function initParallaxEffects() {
+    const parallaxElements = document.querySelectorAll('.hero-background, .about::before, .investment::before');
+    
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        
+        parallaxElements.forEach((element, index) => {
+            const speed = 0.5 + (index * 0.1);
+            element.style.transform = `translateY(${scrolled * speed}px)`;
+        });
+    });
+}
+
+function initCardEffects() {
+    const cards = document.querySelectorAll('.card, .advantage-card, .point');
+    
+    cards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.style.transform = 'translateY(-10px) scale(1.02)';
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'translateY(0) scale(1)';
+        });
+    });
+}
+
+function initButtonEffects() {
+    const buttons = document.querySelectorAll('.btn-primary, .btn-secondary');
+    
+    buttons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            // Create ripple effect
+            const ripple = document.createElement('span');
+            const rect = this.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = e.clientX - rect.left - size / 2;
+            const y = e.clientY - rect.top - size / 2;
+            
+            ripple.style.cssText = `
+                position: absolute;
+                width: ${size}px;
+                height: ${size}px;
+                left: ${x}px;
+                top: ${y}px;
+                background: rgba(255, 255, 255, 0.3);
+                border-radius: 50%;
+                transform: scale(0);
+                animation: ripple 0.6s linear;
+                pointer-events: none;
+            `;
+            
+            this.appendChild(ripple);
+            
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
+        });
+    });
+}
 
 // Add CSS for reveal animation
 const style = document.createElement('style');
@@ -439,49 +847,8 @@ document.head.appendChild(style);
 
 // FAQ Functionality
 document.addEventListener('DOMContentLoaded', () => {
-    // FAQ Category switching
-    const faqCategories = document.querySelectorAll('.faq-category');
-    const faqContents = document.querySelectorAll('.faq-category-content');
-    
-    faqCategories.forEach(category => {
-        category.addEventListener('click', () => {
-            // Remove active class from all categories and contents
-            faqCategories.forEach(cat => cat.classList.remove('active'));
-            faqContents.forEach(content => content.classList.remove('active'));
-            
-            // Add active class to clicked category
-            category.classList.add('active');
-            
-            // Show corresponding content
-            const targetCategory = category.getAttribute('data-category');
-            const targetContent = document.querySelector(`[data-category="${targetCategory}"]`);
-            if (targetContent) {
-                targetContent.classList.add('active');
-            }
-        });
-    });
-    
-    // FAQ Item accordion functionality
-    const faqItems = document.querySelectorAll('.faq-item');
-    
-    faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
-        
-        question.addEventListener('click', () => {
-            // Close other open items in the same category
-            const currentCategory = item.closest('.faq-category-content');
-            const otherItems = currentCategory.querySelectorAll('.faq-item');
-            
-            otherItems.forEach(otherItem => {
-                if (otherItem !== item) {
-                    otherItem.classList.remove('active');
-                }
-            });
-            
-            // Toggle current item
-            item.classList.toggle('active');
-        });
-    });
+    console.log('DOM loaded, initializing FAQ...');
+    initFAQ();
 });
 
 // Add FAQ to navigation
@@ -550,13 +917,28 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // FAQ Functionality
-document.addEventListener('DOMContentLoaded', function() {
+function initFAQ() {
+    console.log('Initializing FAQ...');
+    
+    // Check if FAQ section exists
+    const faqSection = document.querySelector('#faq');
+    if (!faqSection) {
+        console.log('FAQ section not found, skipping initialization');
+        return;
+    }
+    
     // FAQ Category Switching
     const faqCategories = document.querySelectorAll('.faq-category');
     const faqContents = document.querySelectorAll('.faq-category-content');
     
+    console.log('Found FAQ categories:', faqCategories.length);
+    console.log('Found FAQ contents:', faqContents.length);
+    
     faqCategories.forEach(category => {
-        category.addEventListener('click', () => {
+        category.addEventListener('click', (e) => {
+            e.preventDefault();
+            console.log('Category clicked:', category.getAttribute('data-category'));
+            
             // Remove active class from all categories
             faqCategories.forEach(cat => cat.classList.remove('active'));
             // Add active class to clicked category
@@ -566,53 +948,149 @@ document.addEventListener('DOMContentLoaded', function() {
             faqContents.forEach(content => content.classList.remove('active'));
             // Show selected content
             const targetCategory = category.getAttribute('data-category');
-            const targetContent = document.querySelector(`[data-category="${targetCategory}"]`);
+            const targetContent = document.querySelector(`.faq-category-content[data-category="${targetCategory}"]`);
             if (targetContent) {
                 targetContent.classList.add('active');
+                console.log('Showing content for category:', targetCategory);
+            } else {
+                console.error('Target content not found for category:', targetCategory);
             }
         });
     });
     
-    // FAQ Item Toggle
+    // FAQ Item Toggle - Simplified version
     const faqItems = document.querySelectorAll('.faq-item');
+    console.log('Found FAQ items:', faqItems.length);
     
-    faqItems.forEach(item => {
+    faqItems.forEach((item, index) => {
         const question = item.querySelector('.faq-question');
-        const answer = item.querySelector('.faq-answer');
-        const chevron = question.querySelector('.fas');
         
-        question.addEventListener('click', () => {
-            const isActive = item.classList.contains('active');
-            
-            // Close all other items
-            faqItems.forEach(otherItem => {
-                if (otherItem !== item) {
-                    otherItem.classList.remove('active');
-                    const otherAnswer = otherItem.querySelector('.faq-answer');
-                    const otherChevron = otherItem.querySelector('.faq-question .fas');
-                    if (otherAnswer) {
-                        otherAnswer.style.maxHeight = '0';
-                        otherAnswer.style.padding = '0 1.5rem';
-                    }
-                    if (otherChevron) {
-                        otherChevron.style.transform = 'rotate(0deg)';
-                    }
-                }
+        if (question) {
+            question.addEventListener('click', (e) => {
+                e.preventDefault();
+                console.log('FAQ item clicked:', index);
+                
+                // Toggle current item
+                item.classList.toggle('active');
+                console.log('Item toggled, active:', item.classList.contains('active'));
             });
-            
-            // Toggle current item
-            if (isActive) {
-                item.classList.remove('active');
-                answer.style.maxHeight = '0';
-                answer.style.padding = '0 1.5rem';
-                chevron.style.transform = 'rotate(0deg)';
-            } else {
-                item.classList.add('active');
-                answer.style.maxHeight = answer.scrollHeight + 'px';
-                answer.style.padding = '1.5rem';
-                chevron.style.transform = 'rotate(180deg)';
-            }
+        } else {
+            console.error('Question not found for FAQ item:', index);
+        }
+    });
+}
+
+// Also try to initialize after a short delay in case DOM is not ready
+setTimeout(() => {
+    console.log('Delayed FAQ initialization...');
+    initFAQ();
+}, 500);
+
+// Contact functions
+function openTelegram() {
+    // Track the event
+    trackEvent('contact_telegram_click', {
+        contact_method: 'telegram',
+        username: '@yakubiam'
+    });
+    
+    // Open Telegram
+    window.open('https://t.me/yakubiam', '_blank');
+    
+    // Show notification
+    showNotification('Открываю Telegram...', 'info');
+}
+
+function openWhatsApp() {
+    // Track the event
+    trackEvent('contact_whatsapp_click', {
+        contact_method: 'whatsapp',
+        phone: '+7 996 125 56 76'
+    });
+    
+    // Open WhatsApp
+    window.open('https://wa.me/79961255676', '_blank');
+    
+    // Show notification
+    showNotification('Открываю WhatsApp...', 'info');
+}
+
+function copyToClipboard(text) {
+    // Track the event
+    trackEvent('contact_email_copy', {
+        contact_method: 'email',
+        email: text
+    });
+    
+    // Copy to clipboard
+    if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(() => {
+            showNotification('Email скопирован в буфер обмена!', 'success');
+        }).catch(() => {
+            fallbackCopyTextToClipboard(text);
         });
+    } else {
+        fallbackCopyTextToClipboard(text);
+    }
+}
+
+function fallbackCopyTextToClipboard(text) {
+    const textArea = document.createElement("textarea");
+    textArea.value = text;
+    
+    // Avoid scrolling to bottom
+    textArea.style.top = "0";
+    textArea.style.left = "0";
+    textArea.style.position = "fixed";
+    
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+    
+    try {
+        const successful = document.execCommand('copy');
+        if (successful) {
+            showNotification('Email скопирован в буфер обмена!', 'success');
+        } else {
+            showNotification('Не удалось скопировать email', 'error');
+        }
+    } catch (err) {
+        showNotification('Не удалось скопировать email', 'error');
+    }
+    
+    document.body.removeChild(textArea);
+}
+
+// Dashboard sidebar interaction
+document.addEventListener('DOMContentLoaded', () => {
+    const sidebarItems = document.querySelectorAll('.dashboard-sidebar .sidebar-item');
+    
+    sidebarItems.forEach(item => {
+        item.addEventListener('click', () => {
+            // Remove active class from all items
+            sidebarItems.forEach(si => si.classList.remove('active'));
+            // Add active class to clicked item
+            item.classList.add('active');
+            
+            // Track interaction
+            const itemText = item.querySelector('span').textContent;
+            trackEvent('dashboard_sidebar_click', {
+                item: itemText
+            });
+        });
+    });
+    
+    // Dashboard stats animation
+    const dashboardStats = document.querySelectorAll('.dashboard-stats .stat-card');
+    dashboardStats.forEach((card, index) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'all 0.6s ease';
+        
+        setTimeout(() => {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+        }, 1000 + index * 200);
     });
 });
 

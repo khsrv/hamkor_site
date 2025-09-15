@@ -34,109 +34,263 @@
 
     <!-- Hero Section -->
     <section class="hero">
+        <!-- Animated Background -->
+        <div class="hero-background">
+            <div class="hero-particles"></div>
+            <div class="hero-gradient-orb orb-1"></div>
+            <div class="hero-gradient-orb orb-2"></div>
+            <div class="hero-gradient-orb orb-3"></div>
+        </div>
+        
         <div class="hero-container">
             <div class="hero-content">
+                <!-- Badge -->
+                <div class="hero-badge">
+                    <span class="badge-icon">🚀</span>
+                    <span class="badge-text">Революционная B2B платформа</span>
+                </div>
+                
+                <!-- Main Title -->
                 <h1 class="hero-title">
-                    <span class="gradient-text">HAMKOR</span><br>
-                    Ведущая B2B платформа<br>
-                    для Узбекистана
+                    <span class="hero-title-line">
+                        <span class="gradient-text">HAMKOR</span>
+                        <span class="title-accent">—</span>
+                    </span>
+                    <span class="hero-title-line">
+                        <span class="title-highlight">Ведущая</span>
+                        <span class="title-main">B2B платформа</span>
+                    </span>
+                    <span class="hero-title-line">
+                        <span class="title-location">для Узбекистана</span>
+                    </span>
                 </h1>
-                <p class="hero-subtitle">
-                    Эффективное построение торговли на маркетплейсах без закупки товаров 
-                    и с высокой доходностью. Интеграция с UZUM и YANDEX MARKET.
-                </p>
+                
+                <!-- Subtitle with features -->
+                <div class="hero-subtitle">
+                    <p class="subtitle-main">
+                        Эффективное построение торговли на маркетплейсах без закупки товаров 
+                        и с высокой доходностью
+                    </p>
+                    <div class="subtitle-features">
+                        <div class="feature-tag">
+                            <i class="fas fa-check"></i>
+                            <span>Интеграция с UZUM</span>
+                        </div>
+                        <div class="feature-tag">
+                            <i class="fas fa-check"></i>
+                            <span>YANDEX MARKET</span>
+                        </div>
+                        <div class="feature-tag">
+                            <i class="fas fa-check"></i>
+                            <span>FBS модель</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CTA Buttons -->
                 <div class="hero-buttons">
-                    <button class="btn-primary" onclick="scrollToSection('investment')">
-                        <i class="fas fa-chart-line"></i>
-                        Инвестировать
+                    <button class="btn-primary hero-cta-primary" onclick="scrollToSection('investment')">
+                        <div class="btn-content">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Инвестировать</span>
+                        </div>
+                        <div class="btn-shine"></div>
                     </button>
-                    <button class="btn-secondary" onclick="scrollToSection('about')">
-                        <i class="fas fa-play"></i>
-                        Узнать больше
+                    <button class="btn-secondary hero-cta-secondary" onclick="scrollToSection('about')">
+                        <div class="btn-content">
+                            <i class="fas fa-play"></i>
+                            <span>Узнать больше</span>
+                        </div>
                     </button>
                 </div>
+                
+                <!-- Enhanced Stats -->
                 <div class="hero-stats">
-                    <div class="stat-item">
-                        <div class="hero-stat-number">
-                            <span class="hero-stat-value">543</span>
-                            <span class="hero-stat-unit">млн $</span>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="stat-icon">
+                            <i class="fas fa-globe"></i>
                         </div>
-                        <p>Объем e-commerce 2023</p>
+                        <div class="stat-content">
+                            <div class="hero-stat-number">
+                                <span class="hero-stat-value" data-count="543">0</span>
+                                <span class="hero-stat-unit">млн $</span>
+                            </div>
+                            <p class="stat-label">Объем e-commerce 2023</p>
+                            <div class="stat-trend">
+                                <i class="fas fa-arrow-up"></i>
+                                <span>+170% за 2 года</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="stat-item">
-                        <div class="hero-stat-number">
-                            <span class="hero-stat-value">2</span>
-                            <span class="hero-stat-unit">млрд $</span>
+                    
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="stat-icon">
+                            <i class="fas fa-chart-line"></i>
                         </div>
-                        <p>Прогноз к 2027</p>
+                        <div class="stat-content">
+                            <div class="hero-stat-number">
+                                <span class="hero-stat-value" data-count="2">0</span>
+                                <span class="hero-stat-unit">млрд $</span>
+                            </div>
+                            <p class="stat-label">Прогноз к 2027</p>
+                            <div class="stat-trend">
+                                <i class="fas fa-arrow-up"></i>
+                                <span>+270% рост</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="stat-item">
-                        <div class="hero-stat-number">
-                            <span class="hero-stat-value">6</span>
-                            <span class="hero-stat-unit"></span>
+                    
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="stat-icon">
+                            <i class="fas fa-store"></i>
                         </div>
-                        <p>Маркетплейсов</p>
+                        <div class="stat-content">
+                            <div class="hero-stat-number">
+                                <span class="hero-stat-value" data-count="6">0</span>
+                                <span class="hero-stat-unit"></span>
+                            </div>
+                            <p class="stat-label">Маркетплейсов</p>
+                            <div class="stat-trend">
+                                <i class="fas fa-arrow-up"></i>
+                                <span>+25% в год</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            
+            <!-- Enhanced Visual -->
             <div class="hero-visual">
-                <div class="uzbekistan-map">
-                    <svg viewBox="0 0 400 300" class="map-svg">
-                        <!-- Simplified map of Uzbekistan -->
-                        <path d="M50 150 L100 120 L150 130 L200 110 L250 120 L300 100 L350 110 L380 130 L370 160 L350 180 L320 200 L280 190 L240 200 L200 190 L160 200 L120 190 L80 180 L60 160 Z" 
-                              fill="url(#uzbekistanGradient)" 
-                              stroke="#6366f1" 
-                              stroke-width="2"/>
-                        
-                        <!-- Major cities -->
-                        <circle cx="200" cy="150" r="8" fill="#ef4444" class="city-dot" data-city="Ташкент">
-                            <title>Ташкент - Столица</title>
-                        </circle>
-                        <circle cx="150" cy="120" r="6" fill="#f59e0b" class="city-dot" data-city="Самарканд">
-                            <title>Самарканд</title>
-                        </circle>
-                        <circle cx="250" cy="120" r="6" fill="#10b981" class="city-dot" data-city="Бухара">
-                            <title>Бухара</title>
-                        </circle>
-                        <circle cx="100" cy="160" r="5" fill="#8b5cf6" class="city-dot" data-city="Наманган">
-                            <title>Наманган</title>
-                        </circle>
-                        <circle cx="300" cy="160" r="5" fill="#06b6d4" class="city-dot" data-city="Нукус">
-                            <title>Нукус</title>
-                        </circle>
-                        
-                        <!-- Gradient definition -->
+                <!-- 3D Dashboard Mockup -->
+                <div class="dashboard-mockup">
+                    <div class="mockup-screen">
+                        <div class="screen-header">
+                            <div class="screen-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="screen-title">HAMKOR Dashboard</div>
+                        </div>
+                        <div class="screen-content">
+                            <!-- Dashboard Layout -->
+                            <div class="dashboard-layout">
+                                <!-- Sidebar Navigation -->
+                                <div class="dashboard-sidebar">
+                                    <div class="sidebar-item active">
+                                        <i class="fas fa-home"></i>
+                                        <span>Главная</span>
+                                    </div>
+                                    <div class="sidebar-item">
+                                        <i class="fas fa-box"></i>
+                                        <span>Каталог</span>
+                                    </div>
+                                    <div class="sidebar-item">
+                                        <i class="fas fa-chart-bar"></i>
+                                        <span>Аналитика</span>
+                                    </div>
+                                    <div class="sidebar-item">
+                                        <i class="fas fa-cog"></i>
+                                        <span>Настройки</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Main Content Area -->
+                                <div class="dashboard-main">
+                                    <div class="dashboard-header">
+                                        <h3>Общая статистика</h3>
+                                    </div>
+                                    
+                                    <div class="dashboard-stats">
+                                        <div class="stat-card">
+                                            <div class="stat-value">₽2.5M</div>
+                                            <div class="stat-label">Оборот</div>
+                                        </div>
+                                        <div class="stat-card">
+                                            <div class="stat-value">+43%</div>
+                                            <div class="stat-label">Рост</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Mini Chart -->
+                                    <div class="mini-chart">
+                                        <div class="chart-container">
+                                            <div class="chart-line" data-percentage="85"></div>
+                                            <div class="chart-line" data-percentage="92"></div>
+                                            <div class="chart-line" data-percentage="78"></div>
+                                            <div class="chart-line" data-percentage="95"></div>
+                                        </div>
+                                        <div class="chart-labels">
+                                            <span>Q1</span>
+                                            <span>Q2</span>
+                                            <span>Q3</span>
+                                            <span>Q4</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Floating Elements -->
+                <div class="floating-elements">
+                    <div class="floating-card marketplace-card card-1">
+                        <div class="card-icon">
+                            <i class="fab fa-shopify"></i>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title">UZUM</span>
+                            <span class="card-subtitle">2.36M посетителей</span>
+                        </div>
+                        <div class="card-pulse"></div>
+                    </div>
+                    
+                    <div class="floating-card marketplace-card card-2">
+                        <div class="card-icon">
+                            <i class="fab fa-yandex"></i>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title">Yandex Market</span>
+                            <span class="card-subtitle">Международная платформа</span>
+                        </div>
+                        <div class="card-pulse"></div>
+                    </div>
+                    
+                    <div class="floating-card marketplace-card card-3">
+                        <div class="card-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title">B2B</span>
+                            <span class="card-subtitle">Партнерская сеть</span>
+                        </div>
+                        <div class="card-pulse"></div>
+                    </div>
+                    
+                    <!-- Connection Lines -->
+                    <svg class="connection-lines" viewBox="0 0 400 300">
                         <defs>
-                            <linearGradient id="uzbekistanGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0.1" />
-                                <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:0.2" />
+                            <linearGradient id="connectionGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0.8" />
+                                <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:0.4" />
                             </linearGradient>
                         </defs>
+                        <path d="M100 80 Q200 50 300 120" stroke="url(#connectionGradient)" stroke-width="2" fill="none" class="connection-line">
+                            <animate attributeName="stroke-dasharray" values="0,1000;1000,0" dur="3s" repeatCount="indefinite"/>
+                        </path>
+                        <path d="M150 200 Q250 180 350 150" stroke="url(#connectionGradient)" stroke-width="2" fill="none" class="connection-line">
+                            <animate attributeName="stroke-dasharray" values="0,1000;1000,0" dur="3s" repeatCount="indefinite" begin="1s"/>
+                        </path>
                     </svg>
-                    
-                    <!-- Floating marketplace cards -->
-                    <div class="floating-card card-1">
-                        <div class="marketplace-logo">
-                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect x='20' y='30' width='60' height='40' rx='5' fill='%236366f1'/%3E%3Ccircle cx='35' cy='45' r='3' fill='white'/%3E%3Ccircle cx='50' cy='45' r='3' fill='white'/%3E%3Ccircle cx='65' cy='45' r='3' fill='white'/%3E%3Ctext x='50' y='65' text-anchor='middle' font-family='Arial' font-size='12' fill='%236366f1' font-weight='bold'%3EUZUM%3C/text%3E%3C/svg%3E" alt="UZUM">
-                        </div>
-                        <span>UZUM</span>
-                    </div>
-                    
-                    <div class="floating-card card-2">
-                        <div class="marketplace-logo">
-                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect x='20' y='20' width='60' height='60' rx='8' fill='%23fc3f1d'/%3E%3Cpath d='M40 35 L60 35 L60 45 L50 45 L50 55 L40 55 Z' fill='white'/%3E%3Ctext x='50' y='75' text-anchor='middle' font-family='Arial' font-size='10' fill='%23fc3f1d' font-weight='bold'%3EYandex%3C/text%3E%3C/svg%3E" alt="Yandex Market">
-                        </div>
-                        <span>Yandex Market</span>
-                    </div>
-                    
-                    <div class="floating-card card-3">
-                        <div class="marketplace-logo">
-                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 20 L70 40 L60 50 L70 60 L50 80 L30 60 L40 50 L30 40 Z' fill='%2310b981'/%3E%3Ctext x='50' y='90' text-anchor='middle' font-family='Arial' font-size='12' fill='%2310b981' font-weight='bold'%3EB2B%3C/text%3E%3C/svg%3E" alt="B2B">
-                        </div>
-                        <span>B2B</span>
-                    </div>
                 </div>
             </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span class="scroll-text">Прокрутите вниз</span>
         </div>
     </section>
 
@@ -370,30 +524,6 @@
                 </div>
             </div>
 
-            <div class="marketplace-summary">
-                <div class="summary-stats">
-                    <div class="summary-stat">
-                        <span class="summary-value">6</span>
-                        <span class="summary-label">Активных маркетплейсов</span>
-                    </div>
-                    <div class="summary-stat">
-                        <span class="summary-value">$543M</span>
-                        <span class="summary-label">Объем e-commerce 2023</span>
-                    </div>
-                    <div class="summary-stat">
-                        <span class="summary-value">$2B</span>
-                        <span class="summary-label">Прогноз к 2027</span>
-                    </div>
-                    <div class="summary-stat">
-                        <span class="summary-value">2%</span>
-                        <span class="summary-label">Налог на онлайн-доходы</span>
-                    </div>
-                </div>
-                <div class="summary-conclusion">
-                    <h3>Итог</h3>
-                    <p>Рынок e-commerce Узбекистана демонстрирует стремительный рост с объемом $543M в 2023 году и прогнозом до $2B к 2027 году. 6 ключевых маркетплейсов конкурируют за долю рынка, при этом UZUM Market является безусловным лидером. Государственная поддержка в виде льготного налогообложения (2%) и развития инфраструктуры создает благоприятные условия для дальнейшего развития отрасли.</p>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -791,7 +921,7 @@
                             <i class="fas fa-crown"></i>
                         </div>
                         <h4>Модель подписки</h4>
-                        <p class="revenue-amount">₽2,990</p>
+                        <p class="revenue-amount">2,990 руб</p>
                         <p class="revenue-description">Ежемесячная подписка с расширенными возможностями</p>
                         <ul class="subscription-features">
                             <li><i class="fas fa-check"></i> Приоритетная поддержка 24/7</li>
@@ -1287,13 +1417,6 @@
                         <div class="point">
                             <i class="fas fa-check-circle"></i>
                             <div>
-                                <h4>Проверенная модель</h4>
-                                <p>Успешный опыт Reseiiup в России с оборотом ₽50M+</p>
-                            </div>
-                        </div>
-                        <div class="point">
-                            <i class="fas fa-check-circle"></i>
-                            <div>
                                 <h4>Первые на рынке</h4>
                                 <p>Единственная B2B платформа для Узбекистана</p>
                             </div>
@@ -1413,7 +1536,7 @@
                                 <i class="fas fa-chevron-down"></i>
                             </div>
                             <div class="faq-answer">
-                                <p>Мы берем комиссию 3-7% от оборота продавца в зависимости от категории товаров, плюс ₽200-500 за доставку и упаковку каждого заказа. Никаких скрытых платежей или ежемесячных подписок.</p>
+                                <p>Мы берем комиссию 3-7% от оборота продавца в зависимости от категории товаров, плюс 200-500 сум за доставку и упаковку каждого заказа. Никаких скрытых платежей или ежемесячных подписок.</p>
                             </div>
                         </div>
                     </div>
@@ -1555,60 +1678,72 @@
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
-                <h2>Свяжитесь с нами</h2>
+                <h2>Свяжитесь со мной</h2>
                 <p>Готовы обсудить инвестиционные возможности?</p>
             </div>
             <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email</h4>
-                            <p>invest@hamkor.uz</p>
+                <div class="contact-grid">
+                    <!-- Email Card -->
+                    <div class="contact-card email-card">
+                        <div class="contact-card-inner">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-info">
+                                <h3>Email</h3>
+                                <p>yakubiabduqahhor@gmail.com</p>
+                                <div class="contact-action">
+                                    <button class="contact-btn" onclick="copyToClipboard('yakubiabduqahhor@gmail.com')">
+                                        <i class="fas fa-copy"></i>
+                                        Скопировать
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>Телефон</h4>
-                            <p>+998 90 123 45 67</p>
+
+                    <!-- Telegram Card -->
+                    <div class="contact-card telegram-card clickable" onclick="openTelegram()">
+                        <div class="contact-card-inner">
+                            <div class="contact-icon">
+                                <i class="fab fa-telegram"></i>
+                            </div>
+                            <div class="contact-info">
+                                <h3>Telegram</h3>
+                                <p>@yakubiam</p>
+                                <div class="contact-action">
+                                    <button class="contact-btn">
+                                        <i class="fab fa-telegram"></i>
+                                        Написать в Telegram
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="contact-badge">
+                                <span>Рекомендуется</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Адрес</h4>
-                            <p>Ташкент, Узбекистан</p>
+
+                    <!-- WhatsApp Card -->
+                    <div class="contact-card whatsapp-card clickable" onclick="openWhatsApp()">
+                        <div class="contact-card-inner">
+                            <div class="contact-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="contact-info">
+                                <h3>WhatsApp</h3>
+                                <p>+7 996 125 56 76</p>
+                                <div class="contact-action">
+                                    <button class="contact-btn">
+                                        <i class="fab fa-whatsapp"></i>
+                                        Написать в WhatsApp
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <input type="text" placeholder="Ваше имя" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" placeholder="Телефон" required>
-                    </div>
-                    <div class="form-group">
-                        <select required>
-                            <option value="">Размер инвестиций</option>
-                            <option value="100k-500k">₽100,000 - ₽500,000</option>
-                            <option value="500k-1m">₽500,000 - ₽1,000,000</option>
-                            <option value="1m-5m">₽1,000,000 - ₽5,000,000</option>
-                            <option value="5m+">₽5,000,000+</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <textarea placeholder="Сообщение" rows="5"></textarea>
-                    </div>
-                    <button type="submit" class="btn-primary">
-                        <i class="fas fa-paper-plane"></i>
-                        Отправить заявку
-                    </button>
-                </form>
+
             </div>
         </div>
     </section>
@@ -1617,25 +1752,47 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">
-                    <h3>HAMKOR</h3>
-                    <p>B2B платформа для Узбекистана</p>
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <h3>HAMKOR</h3>
+                        <p>B2B платформа для Узбекистана</p>
+                    </div>
+                    <div class="footer-description">
+                        <p>Революционная платформа для эффективной торговли на маркетплейсах без закупки товаров и с высокой доходностью.</p>
+                    </div>
                 </div>
-                <div class="footer-links">
-                    <a href="#about">О проекте</a>
-                    <a href="#stats">Статистика</a>
-                    <a href="#how-it-works">Как работает</a>
-                    <a href="#suppliers">Поставщикам</a>
-                    <a href="#investment">Инвестиции</a>
-                </div>
-                <div class="footer-social">
-                    <a href="#"><i class="fab fa-telegram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
+                
+                <div class="footer-sections">
+                    <div class="footer-section">
+                        <h4>Платформа</h4>
+                        <ul>
+                            <li><a href="#about">О проекте</a></li>
+                            <li><a href="#how-it-works">Как работает</a></li>
+                            <li><a href="#stats">Статистика</a></li>
+                            <li><a href="#faq">FAQ</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Для бизнеса</h4>
+                        <ul>
+                            <li><a href="#suppliers">Поставщикам</a></li>
+                            <li><a href="#investment">Инвестиции</a></li>
+                            <li><a href="#contact">Контакты</a></li>
+                        </ul>
+                    </div>
+                    
                 </div>
             </div>
+            
             <div class="footer-bottom">
-                <p>&copy; 2024 HAMKOR. Все права защищены.</p>
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 HAMKOR. Все права защищены.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Политика конфиденциальности</a>
+                        <a href="#">Условия использования</a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
