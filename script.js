@@ -549,4 +549,71 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// FAQ Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // FAQ Category Switching
+    const faqCategories = document.querySelectorAll('.faq-category');
+    const faqContents = document.querySelectorAll('.faq-category-content');
+    
+    faqCategories.forEach(category => {
+        category.addEventListener('click', () => {
+            // Remove active class from all categories
+            faqCategories.forEach(cat => cat.classList.remove('active'));
+            // Add active class to clicked category
+            category.classList.add('active');
+            
+            // Hide all content
+            faqContents.forEach(content => content.classList.remove('active'));
+            // Show selected content
+            const targetCategory = category.getAttribute('data-category');
+            const targetContent = document.querySelector(`[data-category="${targetCategory}"]`);
+            if (targetContent) {
+                targetContent.classList.add('active');
+            }
+        });
+    });
+    
+    // FAQ Item Toggle
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+        const chevron = question.querySelector('.fas');
+        
+        question.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+            
+            // Close all other items
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                    const otherAnswer = otherItem.querySelector('.faq-answer');
+                    const otherChevron = otherItem.querySelector('.faq-question .fas');
+                    if (otherAnswer) {
+                        otherAnswer.style.maxHeight = '0';
+                        otherAnswer.style.padding = '0 1.5rem';
+                    }
+                    if (otherChevron) {
+                        otherChevron.style.transform = 'rotate(0deg)';
+                    }
+                }
+            });
+            
+            // Toggle current item
+            if (isActive) {
+                item.classList.remove('active');
+                answer.style.maxHeight = '0';
+                answer.style.padding = '0 1.5rem';
+                chevron.style.transform = 'rotate(0deg)';
+            } else {
+                item.classList.add('active');
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+                answer.style.padding = '1.5rem';
+                chevron.style.transform = 'rotate(180deg)';
+            }
+        });
+    });
+});
+
 console.log('HAMKOR Landing Page loaded successfully! 🚀');
