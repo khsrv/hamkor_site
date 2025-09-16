@@ -71,6 +71,7 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 70px;
+    position: relative;
 }
 
 .nav-logo h2 {
@@ -123,6 +124,10 @@ body {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    position: relative;
+    z-index: 1001;
+    padding: 10px;
+    margin: -10px;
 }
 
 .hamburger span {
@@ -131,6 +136,19 @@ body {
     background: var(--text-primary);
     margin: 3px 0;
     transition: 0.3s;
+    border-radius: 2px;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
 }
 
 /* Hero Section */
@@ -3084,6 +3102,13 @@ section {
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        transition: background 0.3s ease;
+    }
+    
+    .hamburger:hover {
+        background: rgba(255, 255, 255, 0.2);
     }
     
     .nav-menu {
@@ -3097,10 +3122,28 @@ section {
         transition: 0.3s;
         box-shadow: var(--shadow-lg);
         padding: 2rem 0;
+        z-index: 1000;
+        height: calc(100vh - 70px);
+        overflow-y: auto;
     }
     
     .nav-menu.active {
         left: 0;
+    }
+    
+    .nav-menu .nav-link {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-menu .nav-link:last-child {
+        border-bottom: none;
+    }
+    
+    .nav-menu .nav-link:hover {
+        background-color: rgba(99, 102, 241, 0.1);
+        color: #6366f1;
     }
     
     .hero-container {
@@ -3839,6 +3882,22 @@ section {
     
     .stat-label {
         font-size: 0.7rem;
+    }
+    
+    /* Mobile Menu Styles for Small Screens */
+    .nav-menu {
+        top: 60px;
+        padding: 1.5rem 0;
+    }
+    
+    .nav-menu .nav-link {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .hamburger span {
+        width: 20px;
+        height: 2px;
     }
 }
 
