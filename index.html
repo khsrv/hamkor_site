@@ -3,37 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HAMKOR - B2B Платформа для Узбекистана</title>
+    <title>HAMKOR - B2B Платформа для Узбекистана | Эффективная торговля на маркетплейсах</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="HAMKOR - революционная B2B платформа для эффективной торговли на маркетплейсах Узбекистана без закупки товаров. Интеграция с UZUM и Yandex Market.">
+    <meta name="keywords" content="B2B платформа, маркетплейсы Узбекистан, UZUM, Yandex Market, e-commerce, торговля без закупки, FBS модель">
+    <meta name="author" content="HAMKOR">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="ru">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://khsrv.github.io/hamkor_site/">
+    <meta property="og:title" content="HAMKOR - B2B Платформа для Узбекистана">
+    <meta property="og:description" content="Революционная B2B платформа для эффективной торговли на маркетплейсах без закупки товаров. Интеграция с UZUM и Yandex Market.">
+    <meta property="og:image" content="https://khsrv.github.io/hamkor_site/og-image.jpg">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:site_name" content="HAMKOR">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://khsrv.github.io/hamkor_site/">
+    <meta property="twitter:title" content="HAMKOR - B2B Платформа для Узбекистана">
+    <meta property="twitter:description" content="Революционная B2B платформа для эффективной торговли на маркетплейсах без закупки товаров.">
+    <meta property="twitter:image" content="https://khsrv.github.io/hamkor_site/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "HAMKOR",
+        "description": "Революционная B2B платформа для эффективной торговли на маркетплейсах Узбекистана без закупки товаров",
+        "url": "https://khsrv.github.io/hamkor_site/",
+        "logo": "https://khsrv.github.io/hamkor_site/logo.png",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+7-996-125-56-76",
+            "contactType": "customer service",
+            "availableLanguage": "Russian"
+        },
+        "sameAs": [
+            "https://t.me/yakubiam"
+        ],
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "UZ",
+            "addressRegion": "Tashkent"
+        },
+        "foundingDate": "2024",
+        "industry": "E-commerce",
+        "serviceType": "B2B Platform",
+        "areaServed": "Uzbekistan"
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "HAMKOR",
+        "url": "https://khsrv.github.io/hamkor_site/",
+        "description": "B2B платформа для эффективной торговли на маркетплейсах Узбекистана",
+        "inLanguage": "ru",
+        "publisher": {
+            "@type": "Organization",
+            "name": "HAMKOR"
+        }
+    }
+    </script>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Основная навигация">
         <div class="nav-container">
             <div class="nav-logo">
-                <h2>HAMKOR</h2>
+                <a href="#hero" aria-label="HAMKOR - Главная страница">
+                    <h2>HAMKOR</h2>
+                </a>
             </div>
-            <div class="nav-menu">
-                <a href="#about" class="nav-link">О проекте</a>
-                <a href="#stats" class="nav-link">Статистика</a>
-                <a href="#how-it-works" class="nav-link">Как работает</a>
-                <a href="#suppliers" class="nav-link">Поставщикам</a>
-                <a href="#investment" class="nav-link">Инвестиции</a>
-                <a href="#faq" class="nav-link">FAQ</a>
-                <a href="#contact" class="nav-link">Контакты</a>
+            <div class="nav-menu" role="menubar" aria-label="Основное меню">
+                <a href="#about" class="nav-link" role="menuitem" aria-label="Перейти к разделу О проекте">О проекте</a>
+                <a href="#stats" class="nav-link" role="menuitem" aria-label="Перейти к разделу Статистика">Статистика</a>
+                <a href="#how-it-works" class="nav-link" role="menuitem" aria-label="Перейти к разделу Как работает">Как работает</a>
+                <a href="#suppliers" class="nav-link" role="menuitem" aria-label="Перейти к разделу Поставщикам">Поставщикам</a>
+                <a href="#investment" class="nav-link" role="menuitem" aria-label="Перейти к разделу Инвестиции">Инвестиции</a>
+                <a href="#faq" class="nav-link" role="menuitem" aria-label="Перейти к разделу FAQ">FAQ</a>
+                <a href="#contact" class="nav-link" role="menuitem" aria-label="Перейти к разделу Контакты">Контакты</a>
             </div>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+            <button class="hamburger" aria-label="Открыть меню навигации" aria-expanded="false" aria-controls="nav-menu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </button>
         </div>
     </nav>
 
+    <!-- Main Content -->
+    <main>
     <!-- Hero Section -->
-    <section class="hero">
+    <section id="hero" class="hero">
         <!-- Animated Background -->
         <div class="hero-background">
             <div class="hero-particles"></div>
@@ -84,16 +170,16 @@
                 
                 <!-- CTA Buttons -->
                 <div class="hero-buttons">
-                    <button class="btn-primary hero-cta-primary" onclick="scrollToSection('investment')">
+                    <button class="btn-primary hero-cta-primary" onclick="scrollToSection('investment')" aria-label="Перейти к разделу инвестиций">
                         <div class="btn-content">
-                            <i class="fas fa-chart-line"></i>
+                            <i class="fas fa-chart-line" aria-hidden="true"></i>
                             <span>Инвестировать</span>
                         </div>
-                        <div class="btn-shine"></div>
+                        <div class="btn-shine" aria-hidden="true"></div>
                     </button>
-                    <button class="btn-secondary hero-cta-secondary" onclick="scrollToSection('about')">
+                    <button class="btn-secondary hero-cta-secondary" onclick="scrollToSection('about')" aria-label="Узнать больше о проекте HAMKOR">
                         <div class="btn-content">
-                            <i class="fas fa-play"></i>
+                            <i class="fas fa-play" aria-hidden="true"></i>
                             <span>Узнать больше</span>
                         </div>
                     </button>
@@ -245,7 +331,7 @@
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <h3>Что такое HAMKOR?</h3>
+                    <h2>Что такое HAMKOR?</h2>
                     <p>
                         HAMKOR — это инновационная B2B платформа, которая позволяет предпринимателям 
                         эффективно торговать на ведущих маркетплейсах Узбекистана без необходимости 
@@ -255,17 +341,17 @@
                     <div class="features-grid">
                         <div class="feature-item">
                             <i class="fas fa-handshake"></i>
-                            <h4>Без закупки товаров</h4>
+                            <h3>Без закупки товаров</h3>
                             <p>Торгуйте без предварительных инвестиций в товар</p>
                         </div>
                         <div class="feature-item">
                             <i class="fas fa-chart-line"></i>
-                            <h4>Высокая доходность</h4>
+                            <h3>Высокая доходность</h3>
                             <p>Оптимизированные процессы для максимальной прибыли</p>
                         </div>
                         <div class="feature-item">
                             <i class="fas fa-link"></i>
-                            <h4>Интеграция с маркетплейсами</h4>
+                            <h3>Интеграция с маркетплейсами</h3>
                             <p>Прямая работа с UZUM и YANDEX MARKET</p>
                         </div>
                     </div>
@@ -1420,21 +1506,21 @@
             </div>
             
             <div class="faq-container">
-                <div class="faq-categories">
-                    <button class="faq-category active" data-category="general">
-                        <i class="fas fa-question-circle"></i>
+                <div class="faq-categories" role="tablist" aria-label="Категории вопросов">
+                    <button class="faq-category active" data-category="general" role="tab" aria-selected="true" aria-controls="general-questions" aria-label="Показать общие вопросы">
+                        <i class="fas fa-question-circle" aria-hidden="true"></i>
                         Общие вопросы
                     </button>
-                    <button class="faq-category" data-category="partners">
-                        <i class="fas fa-handshake"></i>
+                    <button class="faq-category" data-category="partners" role="tab" aria-selected="false" aria-controls="partners-questions" aria-label="Показать вопросы для партнеров">
+                        <i class="fas fa-handshake" aria-hidden="true"></i>
                         Для партнеров
                     </button>
-                    <button class="faq-category" data-category="sellers">
-                        <i class="fas fa-store"></i>
+                    <button class="faq-category" data-category="sellers" role="tab" aria-selected="false" aria-controls="sellers-questions" aria-label="Показать вопросы для продавцов">
+                        <i class="fas fa-store" aria-hidden="true"></i>
                         Для продавцов
                     </button>
-                    <button class="faq-category" data-category="technical">
-                        <i class="fas fa-cogs"></i>
+                    <button class="faq-category" data-category="technical" role="tab" aria-selected="false" aria-controls="technical-questions" aria-label="Показать технические вопросы">
+                        <i class="fas fa-cogs" aria-hidden="true"></i>
                         Технические
                     </button>
                 </div>
@@ -1689,6 +1775,7 @@
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
