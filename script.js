@@ -1,37 +1,110 @@
-// Mobile Navigation Toggle
-function initMobileMenu() {
+// Mobile Navigation Toggle - Simple and Direct
+console.log('Script loaded, looking for hamburger...');
+
+// Test if JavaScript is working
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('JavaScript is working!');
+    
+    // Test click on any element
+    document.addEventListener('click', function(e) {
+        console.log('Something was clicked:', e.target);
+    });
+});
+
+// Try multiple approaches to ensure it works
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM loaded, initializing mobile menu...');
+    
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
-
-    // Debug: Check if elements exist
-    console.log('Hamburger element:', hamburger);
-    console.log('Nav menu element:', navMenu);
-
+    
+    console.log('Hamburger found:', !!hamburger);
+    console.log('Nav menu found:', !!navMenu);
+    
     if (hamburger && navMenu) {
-        // Toggle mobile menu
-        hamburger.addEventListener('click', (e) => {
+        console.log('Adding click event to hamburger...');
+        
+        // Method 1: Direct event listener
+        hamburger.addEventListener('click', function(e) {
             console.log('Hamburger clicked!');
+            e.preventDefault();
             e.stopPropagation();
+            
             hamburger.classList.toggle('active');
             navMenu.classList.toggle('active');
             
-            // Prevent body scroll when menu is open
+            console.log('Hamburger active:', hamburger.classList.contains('active'));
+            console.log('Nav menu active:', navMenu.classList.contains('active'));
+            
             if (navMenu.classList.contains('active')) {
                 document.body.style.overflow = 'hidden';
             } else {
                 document.body.style.overflow = '';
             }
         });
+        
+        // Method 2: Also try mousedown as backup
+        hamburger.addEventListener('mousedown', function(e) {
+            console.log('Hamburger mousedown!');
+            e.preventDefault();
+        });
+        
+        console.log('Mobile menu initialized successfully!');
     } else {
-        console.error('Hamburger or nav menu not found!');
+        console.error('Could not find hamburger or nav menu elements!');
     }
-}
+});
 
-// Initialize mobile menu when DOM is loaded
-document.addEventListener('DOMContentLoaded', initMobileMenu);
+// Also try after a delay
+setTimeout(function() {
+    console.log('Delayed initialization...');
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    if (hamburger && navMenu) {
+        console.log('Adding delayed click event...');
+        hamburger.addEventListener('click', function(e) {
+            console.log('Delayed hamburger clicked!');
+            e.preventDefault();
+            e.stopPropagation();
+            
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            
+            if (navMenu.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        });
+    }
+}, 500);
 
-// Also try to initialize after a short delay
-setTimeout(initMobileMenu, 100);
+// Alternative approach: Event delegation
+document.addEventListener('click', function(e) {
+    if (e.target.closest('.hamburger')) {
+        console.log('Hamburger clicked via delegation!');
+        const hamburger = e.target.closest('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        if (hamburger && navMenu) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            
+            console.log('Delegation - Hamburger active:', hamburger.classList.contains('active'));
+            console.log('Delegation - Nav menu active:', navMenu.classList.contains('active'));
+            
+            if (navMenu.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        }
+    }
+});
 
 // Close mobile menu when clicking on a link
 document.addEventListener('DOMContentLoaded', () => {

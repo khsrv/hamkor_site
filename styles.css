@@ -3101,10 +3101,17 @@ section {
 /* Responsive Design */
 @media (max-width: 768px) {
     .hamburger {
-        display: flex;
+        display: flex !important;
         background: rgba(255, 255, 255, 0.1);
         border-radius: 8px;
         transition: background 0.3s ease;
+        border: 2px solid red !important;
+        min-width: 50px;
+        min-height: 50px;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 9999;
     }
     
     .hamburger:hover {
