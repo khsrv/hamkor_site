@@ -231,7 +231,7 @@ const counterObserver = new IntersectionObserver((entries) => {
 
 // Add data attributes and observe counters
 document.addEventListener('DOMContentLoaded', () => {
-    const counters = document.querySelectorAll('.stat-card h3');
+    const counters = document.querySelectorAll('.stat-value');
     counters.forEach(counter => {
         const text = counter.textContent;
         const number = parseInt(text.replace(/[^\d]/g, ''));
@@ -427,6 +427,32 @@ function animateCounter(element, target, duration = 2000) {
     
     updateCounter();
 }
+
+// Initialize counter animations for statistics
+document.addEventListener('DOMContentLoaded', () => {
+    const statValues = document.querySelectorAll('.stat-value');
+    statValues.forEach(counter => {
+        const text = counter.textContent;
+        const number = parseInt(text.replace(/[^\d]/g, ''));
+        if (number) {
+            counter.setAttribute('data-target', number);
+            counter.textContent = '0';
+            
+            // Create observer for this specific counter
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const target = parseInt(entry.target.getAttribute('data-target'));
+                        animateCounter(entry.target, target);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            observer.observe(counter);
+        }
+    });
+});
 
 // Chart animation
 function animateChart() {
